@@ -10,32 +10,6 @@
 #include "ShiftReg.hpp"
 #include "Timer.hpp"
 
-static const uint8_t NUMS[16] = {
-    0b00111111,
-    0b00000110,
-    0b01011011,
-    0b01001111,
-    0b01100110,
-    0b01101101,
-    0b01111101,
-    0b00000111,
-    0b01111111,
-    0b01101111,
-    0b01110111,
-    0b01111100,
-    0b00111001,
-    0b01011110,
-    0b01111001,
-    0b01110001
-};
-
-typedef struct {
-    ShiftReg* sr;
-    uint8_t n;
-    bool inHex;
-    bool digit;
-} DispParam;
-
 void displayT_CB(DispParam* dp, int*) {
     uint8_t d = 0;
     uint8_t data = 0;
@@ -66,12 +40,16 @@ void blinkT_CB(Pin* p, int*) {
     p->setState(!(p->getState()));
 }
 
-int main(void) {
+void setup(void) {
     DDRB = 0x01;
     PORTB = 0x00;
     DDRA = 0x07;
     PORTA = 0x00;
     timerSetup();
+}
+
+int main(void) {
+    setup();
 
     Pin ser(PORTA_P, PINA0);
     Pin srclk(PORTA_P, PINA2);
