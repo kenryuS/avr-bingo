@@ -17,7 +17,8 @@ ISR(TIM0_OVF_vect) {
 void timerSetup(void) {
     sei();
 
-    TCCR0A = 0x03;
+    TCCR0A = 0x00;
+    TCCR0B = 0x03;
     TIMSK0 = 0x01;
 }
 
