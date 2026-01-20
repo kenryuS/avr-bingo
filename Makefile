@@ -5,7 +5,7 @@ CFLAGS := -Wall -std=c11 -Os -I./include
 CXXFLAGS := -Wall -std=c++11 -Os -I./include
 
 #SRCS := $(wildcard src/*.cpp)
-SRCS := src/main.cpp src/Pin.cpp src/ShiftReg.cpp src/Timer.cpp
+SRCS := src/main.cpp src/Pin.cpp src/ShiftReg.cpp src/Timer.cpp src/ADC.cpp
 OBJS := $(patsubst %.cpp,%.o, $(SRCS))
 
 MCU := attiny44a
