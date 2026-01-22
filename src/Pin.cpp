@@ -14,7 +14,7 @@ Pin::Pin(const Pin& p) {
     }
 }
 
-Pin::Pin(const Pin&& p):
+Pin::Pin(const Pin&& p) noexcept:
     port(p.port),
     pin(p.pin)
 {}

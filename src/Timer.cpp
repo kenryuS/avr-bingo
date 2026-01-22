@@ -1,17 +1,20 @@
 #include "Timer.hpp"
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 
 volatile unsigned long timer0_millis = 0;
 volatile unsigned long timer0_overflow_count = 0;
 
 ISR(TIM0_OVF_vect) {
     unsigned long m = timer0_millis;
+    unsigned long o = timer0_overflow_count;
 
     m += MILLIS_INC;
+    o++;
 
     timer0_millis = m;
-    timer0_overflow_count++;
+    timer0_overflow_count = o;
 }
 
 void timerSetup(void) {

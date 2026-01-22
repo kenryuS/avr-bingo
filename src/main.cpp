@@ -5,11 +5,13 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdint.h>
+#include <stddef.h>
 
 #include "Pin.hpp"
 #include "ShiftReg.hpp"
 #include "Timer.hpp"
 #include "ADC.hpp"
+#include "Button.hpp"
 
 void displayT_CB(DispParam* dp, int*) {
     uint8_t d = 0;
@@ -37,10 +39,13 @@ void displayT_CB(DispParam* dp, int*) {
     *(dp->sr) <<= data;
 }
 
-void readADCT_CB(ADCC* a, uint8_t* n) {
-    uint32_t x = a->read(ADCC::channel_3);
-    x = (100 * x) / 1024;
-    *n = (uint8_t)x;
+void buttonT_CB(DACButtons* d, int*) {
+    size_t bn = d->getButtonNum();
+    for (size_t i = 0; i < bn; i++) {
+        if (d->getState(i)) {
+            ((d->getButtons())[i]).checkAndInterrupt();
+        }
+    }
 }
 
 void setup(void) {
@@ -53,6 +58,23 @@ int main(void) {
     setup();
 
     ADCC adc(ADCC::vref_vcc);
+
+
+    Button btns[4] = {
+        Button(EMPTY_VBSCIV, 0, 0),
+        Button(EMPTY_VBSCIV, 0, 0),
+        Button(EMPTY_VBSCIV, 0, 0),
+        Button(EMPTY_VBSCIV, 0, 0)
+    };
+
+    DACButtons dacb(
+        &adc,
+        ADCC::channel_3,
+        4,
+        DACBTNMAPPING,
+        2,
+        btns
+    );
 
     Pin ser(PORTA_P, PINA0);
     Pin srclk(PORTA_P, PINA2);
@@ -68,10 +90,10 @@ int main(void) {
         .digit = false
     };
     Timer<DispParam, int> displayT(displayT_CB, &dp, 0, 1);
-    Timer<ADCC, uint8_t> readADCT(readADCT_CB, &adc, &(dp.n), 100);
+    Timer<DACButtons, int> buttonT(buttonT_CB, &dacb, 0, 10);
 
     while (1) {
         displayT.tick();
-        readADCT.tick();
+        buttonT.tick();
     }
 }

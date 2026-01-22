@@ -1,11 +1,11 @@
 NAME := avrBingo
 CC := avr-gcc
 CXX := avr-g++
-CFLAGS := -Wall -std=c11 -Os -I./include
-CXXFLAGS := -Wall -std=c++11 -Os -I./include
+CFLAGS := -Wall -Wextra -Wl,--kill-at -Werror -fanalyzer -std=c11 -Os -I./include
+CXXFLAGS := -Wall -Wextra -Wpedantic -Wl,--kill-at -Werror -fanalyzer -std=c++20 -Os -I./include
 
 #SRCS := $(wildcard src/*.cpp)
-SRCS := src/main.cpp src/Pin.cpp src/ShiftReg.cpp src/Timer.cpp src/ADC.cpp
+SRCS := src/main.cpp src/Pin.cpp src/ShiftReg.cpp src/Timer.cpp src/ADC.cpp src/Button.cpp
 OBJS := $(patsubst %.cpp,%.o, $(SRCS))
 
 MCU := attiny44a

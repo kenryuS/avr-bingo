@@ -25,7 +25,7 @@ ADCC::ADCC(enum ADCC::VRef vr):
 }
 
 void ADCC::setVRef(enum ADCC::VRef vr) {
-    switch (vref) {
+    switch (vr) {
         case (ADCC::vref_vcc):
             ADMUX &= ~(1 << 7);
             ADMUX &= ~(1 << 6);
