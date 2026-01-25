@@ -30,9 +30,7 @@ static const uint8_t NUMS[16] = {
 
 static uint8_t DACBTNMAPPING[4] = {
     6,
-    12,
-    24,
-    50
+    12
 };
 
 typedef enum {

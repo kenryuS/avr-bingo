@@ -2,7 +2,6 @@
 #include "defs.hpp"
 
 #include <avr/io.h>
-#include <util/delay.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -126,21 +125,12 @@ int main(void) {
         .calledNums = "00000000000000000000"_xU80
     };
 
-    Button btns[4] = {
+    Button btns[2] = {
         Button(callOutNumber_VECT, &bingo, 0),
         Button(resetBingo_VECT, &bingo, 0),
-        Button(EMPTY_VBSCIV, 0, 0),
-        Button(EMPTY_VBSCIV, 0, 0)
     };
 
-    DACButtons dacb(
-        &adc,
-        ADCC::channel_3,
-        4,
-        DACBTNMAPPING,
-        2,
-        btns
-    );
+    DACButtons dacb(&adc, ADCC::channel_3, 2, DACBTNMAPPING, 2, btns);
 
     Timer<DispParam, int> displayT(displayT_CB, &dp, 0, 1);
     Timer<DACButtons, int> buttonT(buttonT_CB, &dacb, 0, 10);
