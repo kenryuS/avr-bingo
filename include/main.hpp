@@ -4,6 +4,10 @@
 #include <stdint.h>
 #include "Pin.hpp"
 #include "ShiftReg.hpp"
+#include "Button.hpp"
+#include "u80.hpp"
+
+using uint80_t = U80;
 
 static const uint8_t NUMS[16] = {
     0b00111111,
@@ -24,15 +28,40 @@ static const uint8_t NUMS[16] = {
     0b01110001
 };
 
+static uint8_t DACBTNMAPPING[4] = {
+    6,
+    12,
+    24,
+    50
+};
+
+typedef enum {
+    SUCCESS,
+    ALL_NUMBER_CALLED,
+    FAILED_TO_CALL_NUMBER
+} BingoMachineError;
+
 typedef struct {
     ShiftReg* sr;
     uint8_t n;
     bool inHex;
+    bool omitTensZero;
     bool digit;
 } DispParam;
 
+typedef struct {
+    uint8_t* n;
+    BingoMachineError retCode;
+    uint80_t calledNums;
+} CallOutNumberParam;
+
 void displayT_CB(DispParam* dp, int*);
-void blinkT_CB(Pin* p, int*);
+void buttonT_CB(DACButtons* d, int*);
+
+void btn1_VECT(bool s, void* arg, void*);
+void btn2_VECT(bool s, void* arg, void*);
+void callOutNumber_VECT(bool s, void* arg, void*);
+void resetBingo_VECT(bool s, void* arg, void*);
 
 void setup(void);
 

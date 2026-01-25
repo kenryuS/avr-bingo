@@ -17,6 +17,7 @@ class ShiftReg {
         void operator<<(size_t n); // shift contents n times
         void operator<<=(uint8_t x); // load 8 bit data to register
 
+        // shift out all data with 0
         void clear();
     private:
         Pin dat;

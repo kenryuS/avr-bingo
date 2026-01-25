@@ -1,4 +1,4 @@
-
+// Non blocking timer with explicit types
 template<typename Arg, typename Res>
 class Timer {
     public:

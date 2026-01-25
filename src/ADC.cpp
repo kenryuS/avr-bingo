@@ -38,6 +38,7 @@ void ADCC::setVRef(enum ADCC::VRef vr) {
             ADMUX |= (1 << 7);
             ADMUX &= ~(1 << 6);
     }
+    vref = vr;
 }
 
 enum ADCC::VRef ADCC::getVRef() {
