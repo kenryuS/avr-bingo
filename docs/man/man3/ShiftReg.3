@@ -1,0 +1,85 @@
+.TH "ShiftReg" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ShiftReg
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ShiftReg\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShiftReg\fP (\fBPin\fP ser, \fBPin\fP srck, \fBPin\fP rck)"
+.br
+.ti -1c
+.RI "\fBShiftReg\fP (const \fBShiftReg\fP &sr)"
+.br
+.ti -1c
+.RI "\fBShiftReg\fP (const \fBShiftReg\fP &&sr)=delete"
+.br
+.ti -1c
+.RI "\fB~ShiftReg\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBoperator<<\fP (size_t n)"
+.br
+.ti -1c
+.RI "void \fBoperator<<=\fP (uint8_t x)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Shift Register Class\&. This class represents 74HC595 shift register\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ShiftReg::ShiftReg (\fBPin\fP ser, \fBPin\fP srck, \fBPin\fP rck)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIser\fP \fBPin\fP connected to serial data input of a register\&. 
+.br
+\fIsrck\fP \fBPin\fP connected to shift clock of a register\&. 
+.br
+\fIrck\fP \fBPin\fP connected to output latch of a register\&. 
+.RE
+.PP
+
+.SS "ShiftReg::ShiftReg (const \fBShiftReg\fP & sr)"
+Copy Constructor\&. 
+.SS "ShiftReg::ShiftReg (const \fBShiftReg\fP && sr)\fR [delete]\fP"
+
+.SS "ShiftReg::~ShiftReg ()\fR [default]\fP"
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ShiftReg::clear ()"
+shift out all data with 0\&. 
+.SS "void ShiftReg::operator<< (size_t n)"
+Operator that performs arbitary number of shifting\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Number of shiftings\&. 
+.RE
+.PP
+
+.SS "void ShiftReg::operator<<= (uint8_t x)"
+Loads 8-bit value to a register\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP 8-bit value to be loaded\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

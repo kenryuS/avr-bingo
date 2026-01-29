@@ -1,0 +1,226 @@
+\doxysection{ADCC Class Reference}
+\hypertarget{classADCC}{}\label{classADCC}\index{ADCC@{ADCC}}
+
+
+Single Ended 10 bits ADC.  
+
+
+
+
+{\ttfamily \+\#include $<$ADC.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}} \{ \newline
+\doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ae1459875493f0efd4aafb61cf690382e}{channel\+\_\+0}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a374410974c7f4bfa8e014396909064e2}{channel\+\_\+1}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a7495eaf75e1a231d3b6d144e3c262081}{channel\+\_\+2}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a71a8bdee8c2c09025eca4633aa31f790}{channel\+\_\+3}}
+, \newline
+\doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a3bb64e59cdf8abfd2ffb1721ac536f7e}{channel\+\_\+4}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a1e2b9a3f83c7d8c91df701f4f0b9837d}{channel\+\_\+5}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ae17194739198e1c13384db7a210c4d05}{channel\+\_\+6}}
+, \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ad33756927c90e7c98847ae82c7e9acf2}{channel\+\_\+7}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}} \{ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503da023103189cd17bf6e7d9501f62bda14e}{vref\+\_\+vcc}}
+, \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503da4387551671cae8e8fa5f6882fdc0c238}{vref\+\_\+aref}}
+, \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503daa811726a194d477d84006b7f95daa417}{vref\+\_\+11}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classADCC_a4d58556bc21651c9597b44812bf848fe}{ADCC}} (enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}} vr)
+\item 
+\doxymbox{\hyperlink{classADCC_aa9d5c83d15c8fb62a242e85db9c73153}{ADCC}} (const \doxymbox{\hyperlink{classADCC}{ADCC}} \&)=delete
+\item 
+\doxymbox{\hyperlink{classADCC_a8584138daf4945961c4709adb7c60319}{ADCC}} (const \doxymbox{\hyperlink{classADCC}{ADCC}} \&\&)=delete
+\item 
+void \doxymbox{\hyperlink{classADCC_aa40ca437e9fe3441b082d56841d42842}{set\+VRef}} (enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}} vr)
+\item 
+enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}} \doxymbox{\hyperlink{classADCC_a305d0d5923e1fb19d749422c798d4057}{get\+VRef}} ()
+\item 
+void \doxymbox{\hyperlink{classADCC_a34cbbd8578d4f034bec59741d4559993}{set\+Channel}} (enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}} c)
+\item 
+enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}} \doxymbox{\hyperlink{classADCC_ad87ddcc6d6f6d301510a7fa1ec9632b4}{get\+Channel}} ()
+\item 
+uint16\+\_\+t \doxymbox{\hyperlink{classADCC_a228cb04e1b9e6880e3d4166372285065}{read}} (enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}} c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Single Ended 10 bits ADC. 
+
+\label{doc-enum-members}
+\Hypertarget{classADCC_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846}\index{ADCC@{ADCC}!Channel@{Channel}}
+\index{Channel@{Channel}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{Channel}{Channel}}
+{\footnotesize\ttfamily \label{classADCC_ae05e0741eb74226825cae471e58f6846} 
+enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{ADCC::\+\+Channel}}}
+
+ADC channel enumerations. Represents ADC0\texorpdfstring{$\sim$}{\string~}7 which is mapped to PORTA. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_0@{channel\_0}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_0@{channel\_0}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846ae1459875493f0efd4aafb61cf690382e}\label{classADCC_ae05e0741eb74226825cae471e58f6846ae1459875493f0efd4aafb61cf690382e} 
+channel\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_1@{channel\_1}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_1@{channel\_1}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846a374410974c7f4bfa8e014396909064e2}\label{classADCC_ae05e0741eb74226825cae471e58f6846a374410974c7f4bfa8e014396909064e2} 
+channel\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_2@{channel\_2}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_2@{channel\_2}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846a7495eaf75e1a231d3b6d144e3c262081}\label{classADCC_ae05e0741eb74226825cae471e58f6846a7495eaf75e1a231d3b6d144e3c262081} 
+channel\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_3@{channel\_3}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_3@{channel\_3}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846a71a8bdee8c2c09025eca4633aa31f790}\label{classADCC_ae05e0741eb74226825cae471e58f6846a71a8bdee8c2c09025eca4633aa31f790} 
+channel\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_4@{channel\_4}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_4@{channel\_4}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846a3bb64e59cdf8abfd2ffb1721ac536f7e}\label{classADCC_ae05e0741eb74226825cae471e58f6846a3bb64e59cdf8abfd2ffb1721ac536f7e} 
+channel\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_5@{channel\_5}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_5@{channel\_5}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846a1e2b9a3f83c7d8c91df701f4f0b9837d}\label{classADCC_ae05e0741eb74226825cae471e58f6846a1e2b9a3f83c7d8c91df701f4f0b9837d} 
+channel\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_6@{channel\_6}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_6@{channel\_6}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846ae17194739198e1c13384db7a210c4d05}\label{classADCC_ae05e0741eb74226825cae471e58f6846ae17194739198e1c13384db7a210c4d05} 
+channel\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{channel\_7@{channel\_7}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!channel\_7@{channel\_7}}
+}\Hypertarget{classADCC_ae05e0741eb74226825cae471e58f6846ad33756927c90e7c98847ae82c7e9acf2}\label{classADCC_ae05e0741eb74226825cae471e58f6846ad33756927c90e7c98847ae82c7e9acf2} 
+channel\+\_\+7&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classADCC_a60738ce403da072d37bb0ad25bac503d}\index{ADCC@{ADCC}!VRef@{VRef}}
+\index{VRef@{VRef}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{VRef}{VRef}}
+{\footnotesize\ttfamily \label{classADCC_a60738ce403da072d37bb0ad25bac503d} 
+enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{ADCC::\+\+VRef}}}
+
+ADC voltage reference type enumerations. Represents available voltage reference types for ADC. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vref\_vcc@{vref\_vcc}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!vref\_vcc@{vref\_vcc}}
+}\Hypertarget{classADCC_a60738ce403da072d37bb0ad25bac503da023103189cd17bf6e7d9501f62bda14e}\label{classADCC_a60738ce403da072d37bb0ad25bac503da023103189cd17bf6e7d9501f62bda14e} 
+vref\+\_\+vcc&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vref\_aref@{vref\_aref}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!vref\_aref@{vref\_aref}}
+}\Hypertarget{classADCC_a60738ce403da072d37bb0ad25bac503da4387551671cae8e8fa5f6882fdc0c238}\label{classADCC_a60738ce403da072d37bb0ad25bac503da4387551671cae8e8fa5f6882fdc0c238} 
+vref\+\_\+aref&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{vref\_11@{vref\_11}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!vref\_11@{vref\_11}}
+}\Hypertarget{classADCC_a60738ce403da072d37bb0ad25bac503daa811726a194d477d84006b7f95daa417}\label{classADCC_a60738ce403da072d37bb0ad25bac503daa811726a194d477d84006b7f95daa417} 
+vref\+\_\+11&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-constructors}
+\Hypertarget{classADCC_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classADCC_a4d58556bc21651c9597b44812bf848fe}\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{ADCC()}{ADCC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classADCC_a4d58556bc21651c9597b44812bf848fe} 
+ADCC::\+\+ADCC (\begin{DoxyParamCaption}\item[{enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}}]{vr}{}\end{DoxyParamCaption})}
+
+Constructor. Sets voltage reference, prescaler to 16, and enable ADC. 
+\begin{DoxyParams}{Parameters}
+{\em vr} & voltage reference type. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classADCC_aa9d5c83d15c8fb62a242e85db9c73153}\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{ADCC()}{ADCC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classADCC_aa9d5c83d15c8fb62a242e85db9c73153} 
+ADCC::\+\+ADCC (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classADCC}{ADCC}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classADCC_a8584138daf4945961c4709adb7c60319}\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\index{ADCC@{ADCC}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{ADCC()}{ADCC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classADCC_a8584138daf4945961c4709adb7c60319} 
+ADCC::\+\+ADCC (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classADCC}{ADCC}} \&\&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classADCC_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classADCC_ad87ddcc6d6f6d301510a7fa1ec9632b4}\index{ADCC@{ADCC}!getChannel@{getChannel}}
+\index{getChannel@{getChannel}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{getChannel()}{getChannel()}}
+{\footnotesize\ttfamily \label{classADCC_ad87ddcc6d6f6d301510a7fa1ec9632b4} 
+enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}} ADCC::\+get\+Channel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets current ADC channel. \Hypertarget{classADCC_a305d0d5923e1fb19d749422c798d4057}\index{ADCC@{ADCC}!getVRef@{getVRef}}
+\index{getVRef@{getVRef}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{getVRef()}{getVRef()}}
+{\footnotesize\ttfamily \label{classADCC_a305d0d5923e1fb19d749422c798d4057} 
+enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}} ADCC::\+get\+VRef (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets current voltage reference type. \Hypertarget{classADCC_a228cb04e1b9e6880e3d4166372285065}\index{ADCC@{ADCC}!read@{read}}
+\index{read@{read}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{classADCC_a228cb04e1b9e6880e3d4166372285065} 
+uint16\+\_\+t ADCC::\+read (\begin{DoxyParamCaption}\item[{enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}}]{c}{}\end{DoxyParamCaption})}
+
+Starts single shot ADC conversion. This operation is blocking. 
+\begin{DoxyParams}{Parameters}
+{\em c} & ADC channel to be read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contents of ADC register; conversion result. 
+\end{DoxyReturn}
+\Hypertarget{classADCC_a34cbbd8578d4f034bec59741d4559993}\index{ADCC@{ADCC}!setChannel@{setChannel}}
+\index{setChannel@{setChannel}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{setChannel()}{setChannel()}}
+{\footnotesize\ttfamily \label{classADCC_a34cbbd8578d4f034bec59741d4559993} 
+void ADCC::\+set\+Channel (\begin{DoxyParamCaption}\item[{enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}}]{c}{}\end{DoxyParamCaption})}
+
+Sets ADC channel. 
+\begin{DoxyParams}{Parameters}
+{\em c} & target ADC channel. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classADCC_aa40ca437e9fe3441b082d56841d42842}\index{ADCC@{ADCC}!setVRef@{setVRef}}
+\index{setVRef@{setVRef}!ADCC@{ADCC}}
+\doxysubsubsection{\texorpdfstring{setVRef()}{setVRef()}}
+{\footnotesize\ttfamily \label{classADCC_aa40ca437e9fe3441b082d56841d42842} 
+void ADCC::\+set\+VRef (\begin{DoxyParamCaption}\item[{enum \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}}]{vr}{}\end{DoxyParamCaption})}
+
+Sets voltage reference type. 
+\begin{DoxyParams}{Parameters}
+{\em vr} & target voltage reference. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{ADC_8hpp}{ADC.\+hpp}}\end{DoxyCompactItemize}

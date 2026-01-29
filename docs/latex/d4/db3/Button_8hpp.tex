@@ -1,0 +1,51 @@
+\doxysection{include/\+\+Button.hpp File Reference}
+\hypertarget{Button_8hpp}{}\label{Button_8hpp}\index{include/Button.hpp@{include/Button.hpp}}
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include "{}Pin.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}ADC.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classButton}{Button}}
+\item 
+class \doxymbox{\hyperlink{classDACButtons}{DACButtons}}
+\begin{DoxyCompactList}\small\item\em DAC buttons class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{Virtual\+Button\+State\+Change\+Interrupt\+Vect}} = void(bool, void\texorpdfstring{$\ast$}{*}, void\texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{Button_8hpp_aa5046dad6be550e603d80f99379862d3}{EMPTY\+\_\+\+VBSCIV}} (bool, void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{Button_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}\index{Button.hpp@{Button.hpp}!VirtualButtonStateChangeInterruptVect@{VirtualButtonStateChangeInterruptVect}}
+\index{VirtualButtonStateChangeInterruptVect@{VirtualButtonStateChangeInterruptVect}!Button.hpp@{Button.hpp}}
+\doxysubsubsection{\texorpdfstring{VirtualButtonStateChangeInterruptVect}{VirtualButtonStateChangeInterruptVect}}
+{\footnotesize\ttfamily \label{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610} 
+using \doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{Virtual\+Button\+State\+Change\+Interrupt\+Vect}} = void(bool, void\texorpdfstring{$\ast$}{*}, void\texorpdfstring{$\ast$}{*})}
+
+Function signiture for constructing virtual interrupt vector \begin{DoxySeeAlso}{See also}
+\doxylink{classButton}{Button}. 
+\end{DoxySeeAlso}
+
+
+\label{doc-func-members}
+\Hypertarget{Button_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Button_8hpp_aa5046dad6be550e603d80f99379862d3}\index{Button.hpp@{Button.hpp}!EMPTY\_VBSCIV@{EMPTY\_VBSCIV}}
+\index{EMPTY\_VBSCIV@{EMPTY\_VBSCIV}!Button.hpp@{Button.hpp}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_VBSCIV()}{EMPTY\_VBSCIV()}}
+{\footnotesize\ttfamily \label{Button_8hpp_aa5046dad6be550e603d80f99379862d3} 
+void EMPTY\+\_\+\+VBSCIV (\begin{DoxyParamCaption}\item[{bool}]{}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Empty virtual button state change interrupt vector function. The placeholder function for Buttons\textquotesingle{} interrupt \begin{DoxySeeAlso}{See also}
+\doxylink{classButton}{Button}. 
+\end{DoxySeeAlso}

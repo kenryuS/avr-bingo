@@ -1,0 +1,62 @@
+\doxysection{Timer.\+tpp}
+\hypertarget{Timer_8tpp_source}{}\label{Timer_8tpp_source}\index{include/Timer.tpp@{include/Timer.tpp}}
+\doxymbox{\hyperlink{Timer_8tpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Arg,\ \textcolor{keyword}{typename}\ Res>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classTimer_a42494e7cee5dd64e63c8849db78b89ce}{Timer}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classTimer_a42494e7cee5dd64e63c8849db78b89ce}{Timer}}(\doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback<Arg,\ Res>}}\ f,\ Arg*\ arg,\ Res*\ res,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ tout):}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ cb\_arg(arg),}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ cb\_res(res),}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ timeout(tout)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ last\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ cb\ =\ f;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classTimer_ae8e56f7237fb8f69210733fef5150f5f}{\string~Timer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classTimer_a5199320f6c7c128ca6ca4749578633d3}{setTimeout}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ t)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ timeout\ =\ t;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{classTimer_a3b2bd3c201a676bbf88ac9891f2b52b4}{getTimeout}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ timeout;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classTimer_a1da3b28386720cc53901ffc7fc48f30a}{setArg}}(Arg*\ arg)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ cb\_arg\ =\ arg;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Arg*\ \doxymbox{\hyperlink{classTimer_ae230d1da11eeb5cde38c624c84aaec2f}{getArg}}()\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cb\_arg;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classTimer_ac0e72671d4e4ea2e283318710b7eb115}{setRes}}(Res*\ res)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ cb\_res\ =\ res;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ Res*\ \doxymbox{\hyperlink{classTimer_aa4d3b5236e81cd4072d541f2e94a32ec}{getRes}}()\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cb\_res;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classTimer_a00bd85b917466fbc2145ee1326f1c267}{tick}}()\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ curr\ =\ \doxymbox{\hyperlink{Timer_8hpp_a1871228c14c912ca1479cf826ddcb07f}{millis}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((curr\ -\/\ last)\ <=\ timeout)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ (*cb)(cb\_arg,\ cb\_res);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ last\ =\ curr;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback<Arg,\ Res>}}\ *cb;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ Arg*\ cb\_arg;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ Res*\ cb\_res;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ timeout;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ last;}
+\DoxyCodeLine{00080\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,92 @@
+.TH "DACButtons" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DACButtons \- DAC buttons class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Button\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDACButtons\fP (\fBADCC\fP *adc, enum \fBADCC::Channel\fP ch, size_t num, uint8_t *map, uint8_t margin, \fBButton\fP *btns)"
+.br
+.ti -1c
+.RI "\fBDACButtons\fP (const \fBDACButtons\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBDACButtons\fP (const \fBDACButtons\fP &&)=delete"
+.br
+.ti -1c
+.RI "size_t \fBgetButtonNum\fP ()"
+.br
+.ti -1c
+.RI "\fBButton\fP * \fBgetButtons\fP ()"
+.br
+.ti -1c
+.RI "bool \fBgetState\fP (size_t index)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+DAC buttons class\&. 
+
+Buttons with digital to analog converter, without multi-button detection\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DACButtons::DACButtons (\fBADCC\fP * adc, enum \fBADCC::Channel\fP ch, size_t num, uint8_t * map, uint8_t margin, \fBButton\fP * btns)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIadc\fP ADC to read value from DAC\&. 
+.br
+\fIch\fP ADC channel to read from\&. 
+.br
+\fInum\fP Number of buttons to handel\&. 
+.br
+\fImap\fP Map of DAC value in percentage to buttons\&. 
+.br
+\fImargin\fP Margin of DAC value\&. 
+.br
+\fIbtns\fP Array of buttons 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBButton\fP\&. 
+.RE
+.PP
+
+.SS "DACButtons::DACButtons (const \fBDACButtons\fP & )\fR [delete]\fP"
+
+.SS "DACButtons::DACButtons (const \fBDACButtons\fP && )\fR [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "size_t DACButtons::getButtonNum ()"
+Gets number of buttons\&. 
+.SS "\fBButton\fP * DACButtons::getButtons ()"
+Gets array of buttons\&. 
+.SS "bool DACButtons::getState (size_t index)"
+Gets state of specified button\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Index in buttons array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Current state of the button\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

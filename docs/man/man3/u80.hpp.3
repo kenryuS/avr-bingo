@@ -1,0 +1,51 @@
+.TH "include/u80.hpp" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/u80.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdint\&.h>\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBU80\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBU80\fP \fBoperator''_xU80\fP (const char *x, size_t sz)"
+.br
+.RI "convert string hexadecimal representation of "uint80_t" into \fBU80\fP object "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBU80\fP operator''_xU80 (const char * x, size_t sz)"
+
+.PP
+convert string hexadecimal representation of "uint80_t" into \fBU80\fP object 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP hexadecimal represented string\&. 
+.br
+\fIsz\fP length of string\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+converted unsigned 80 bit integer\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

@@ -1,0 +1,89 @@
+\doxysection{Button Class Reference}
+\hypertarget{classButton}{}\label{classButton}\index{Button@{Button}}
+
+
+{\ttfamily \+\#include $<$Button.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classButton_ab2dc980d7dabff808d3b8bfb759d4583}{Button}} (\doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{Virtual\+Button\+State\+Change\+Interrupt\+Vect}} v, void \texorpdfstring{$\ast$}{*}arg, void \texorpdfstring{$\ast$}{*}res)
+\item 
+\doxymbox{\hyperlink{classButton_a365946b6fbbd62440289e2e34b5fe311}{Button}} (const \doxymbox{\hyperlink{classButton}{Button}} \&)=delete
+\item 
+constexpr \doxymbox{\hyperlink{classButton_a38ec77ea728dca2242f6a1f6e93d3e73}{Button}} (\doxymbox{\hyperlink{classButton}{Button}} \&\&b) noexcept
+\item 
+void \doxymbox{\hyperlink{classButton_abd3fb72b181988ba319d9b7c43c299aa}{set\+State}} (bool s)
+\item 
+bool \doxymbox{\hyperlink{classButton_a946d9bb84880931ccf3494d84f0ac73a}{get\+State}} ()
+\item 
+void \doxymbox{\hyperlink{classButton_aab6e05c1fd9da1ee5a91ee7cc70c41a4}{check\+And\+Interrupt}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classButton}{Button} class. This class manages single button state and execution of virtual interrupt or callback. 
+
+\label{doc-constructors}
+\Hypertarget{classButton_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classButton_ab2dc980d7dabff808d3b8bfb759d4583}\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classButton_ab2dc980d7dabff808d3b8bfb759d4583} 
+Button::\+\+Button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{Virtual\+Button\+State\+Change\+Interrupt\+Vect}}}]{v}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{res}{}\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em v} & virtual interrupt vector or callback to be executed. \\
+\hline
+{\em arg} & void pointer to interrupt argument(s). \\
+\hline
+{\em res} & void pointer to interrupt return(s). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classButton_a365946b6fbbd62440289e2e34b5fe311}\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classButton_a365946b6fbbd62440289e2e34b5fe311} 
+Button::\+\+Button (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classButton}{Button}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classButton_a38ec77ea728dca2242f6a1f6e93d3e73}\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classButton_a38ec77ea728dca2242f6a1f6e93d3e73} 
+Button::\+\+Button (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classButton}{Button}} \&\&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+Move constructor. 
+
+\label{doc-func-members}
+\Hypertarget{classButton_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classButton_aab6e05c1fd9da1ee5a91ee7cc70c41a4}\index{Button@{Button}!checkAndInterrupt@{checkAndInterrupt}}
+\index{checkAndInterrupt@{checkAndInterrupt}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{checkAndInterrupt()}{checkAndInterrupt()}}
+{\footnotesize\ttfamily \label{classButton_aab6e05c1fd9da1ee5a91ee7cc70c41a4} 
+void Button::\+check\+And\+Interrupt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Check state and execute interrupt. The interrupt is only executed when current and previous state missmatches. \Hypertarget{classButton_a946d9bb84880931ccf3494d84f0ac73a}\index{Button@{Button}!getState@{getState}}
+\index{getState@{getState}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{classButton_a946d9bb84880931ccf3494d84f0ac73a} 
+bool Button::\+get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets state of button. \Hypertarget{classButton_abd3fb72b181988ba319d9b7c43c299aa}\index{Button@{Button}!setState@{setState}}
+\index{setState@{setState}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily \label{classButton_abd3fb72b181988ba319d9b7c43c299aa} 
+void Button::\+set\+State (\begin{DoxyParamCaption}\item[{bool}]{s}{}\end{DoxyParamCaption})}
+
+Sets state of button. Usually for counteracting pull up. 
+\begin{DoxyParams}{Parameters}
+{\em s} & State of button represented in boolean. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{Button_8hpp}{Button.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+\doxysection{Timer\texorpdfstring{$<$}{<} Arg, Res \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classTimer}{}\label{classTimer}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+
+
+Non-\/blocking timer.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classTimer_a42494e7cee5dd64e63c8849db78b89ce}{Timer}} (\doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback}}$<$ Arg, Res $>$ f, Arg \texorpdfstring{$\ast$}{*}arg, Res \texorpdfstring{$\ast$}{*}res, unsigned long tout)
+\item 
+\doxymbox{\hyperlink{classTimer_ae8e56f7237fb8f69210733fef5150f5f}{\texorpdfstring{$\sim$}{\string~}\+Timer}} ()=default
+\item 
+void \doxymbox{\hyperlink{classTimer_a5199320f6c7c128ca6ca4749578633d3}{set\+Timeout}} (unsigned long t)
+\item 
+unsigned long \doxymbox{\hyperlink{classTimer_a3b2bd3c201a676bbf88ac9891f2b52b4}{get\+Timeout}} ()
+\item 
+void \doxymbox{\hyperlink{classTimer_a1da3b28386720cc53901ffc7fc48f30a}{set\+Arg}} (Arg \texorpdfstring{$\ast$}{*}arg)
+\item 
+Arg \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classTimer_ae230d1da11eeb5cde38c624c84aaec2f}{get\+Arg}} ()
+\item 
+void \doxymbox{\hyperlink{classTimer_ac0e72671d4e4ea2e283318710b7eb115}{set\+Res}} (Res \texorpdfstring{$\ast$}{*}res)
+\item 
+Res \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classTimer_aa4d3b5236e81cd4072d541f2e94a32ec}{get\+Res}} ()
+\item 
+void \doxymbox{\hyperlink{classTimer_a00bd85b917466fbc2145ee1326f1c267}{tick}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Arg, typename Res$>$\newline
+class Timer$<$ Arg, Res $>$}
+Non-\/blocking timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Arg} & Type of callback argument(s). \\
+\hline
+{\em Res} & Type of callback return value(s). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-constructors}
+\Hypertarget{classTimer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTimer_a42494e7cee5dd64e63c8849db78b89ce}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily \label{classTimer_a42494e7cee5dd64e63c8849db78b89ce} 
+template$<$typename Arg, typename Res$>$ \\
+\doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+\+Timer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback}}$<$ Arg, Res $>$}]{f}{, }\item[{Arg \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{Res \texorpdfstring{$\ast$}{*}}]{res}{, }\item[{unsigned long}]{tout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em f} & \doxylink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback} function to be executed. \\
+\hline
+{\em arg} & Pointer to argument(s) of callback function with type Arg. \\
+\hline
+{\em res} & Pointer to return(s) of callback function with type Res. \\
+\hline
+{\em tout} & Time out of timer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTimer_ae8e56f7237fb8f69210733fef5150f5f}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!````~Timer@{\texorpdfstring{$\sim$}{\string~}Timer}}
+\index{````~Timer@{\texorpdfstring{$\sim$}{\string~}Timer}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Timer()}{\string~Timer()}}
+{\footnotesize\ttfamily \label{classTimer_ae8e56f7237fb8f69210733fef5150f5f} 
+template$<$typename Arg, typename Res$>$ \\
+\doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{classTimer}{Timer}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor. 
+
+\label{doc-func-members}
+\Hypertarget{classTimer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTimer_ae230d1da11eeb5cde38c624c84aaec2f}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!getArg@{getArg}}
+\index{getArg@{getArg}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{getArg()}{getArg()}}
+{\footnotesize\ttfamily \label{classTimer_ae230d1da11eeb5cde38c624c84aaec2f} 
+template$<$typename Arg, typename Res$>$ \\
+Arg \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+get\+Arg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets argument pointer. \Hypertarget{classTimer_aa4d3b5236e81cd4072d541f2e94a32ec}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!getRes@{getRes}}
+\index{getRes@{getRes}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{getRes()}{getRes()}}
+{\footnotesize\ttfamily \label{classTimer_aa4d3b5236e81cd4072d541f2e94a32ec} 
+template$<$typename Arg, typename Res$>$ \\
+Res \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+get\+Res (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets return value pointer. \Hypertarget{classTimer_a3b2bd3c201a676bbf88ac9891f2b52b4}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!getTimeout@{getTimeout}}
+\index{getTimeout@{getTimeout}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{getTimeout()}{getTimeout()}}
+{\footnotesize\ttfamily \label{classTimer_a3b2bd3c201a676bbf88ac9891f2b52b4} 
+template$<$typename Arg, typename Res$>$ \\
+unsigned long \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+get\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets timeout. \Hypertarget{classTimer_a1da3b28386720cc53901ffc7fc48f30a}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!setArg@{setArg}}
+\index{setArg@{setArg}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{setArg()}{setArg()}}
+{\footnotesize\ttfamily \label{classTimer_a1da3b28386720cc53901ffc7fc48f30a} 
+template$<$typename Arg, typename Res$>$ \\
+void \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+set\+Arg (\begin{DoxyParamCaption}\item[{Arg \texorpdfstring{$\ast$}{*}}]{arg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets argument through pointer. 
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to argument(s). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTimer_ac0e72671d4e4ea2e283318710b7eb115}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!setRes@{setRes}}
+\index{setRes@{setRes}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{setRes()}{setRes()}}
+{\footnotesize\ttfamily \label{classTimer_ac0e72671d4e4ea2e283318710b7eb115} 
+template$<$typename Arg, typename Res$>$ \\
+void \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+set\+Res (\begin{DoxyParamCaption}\item[{Res \texorpdfstring{$\ast$}{*}}]{res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets return through pointer. 
+\begin{DoxyParams}{Parameters}
+{\em res} & Pointer to return value(s). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTimer_a5199320f6c7c128ca6ca4749578633d3}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily \label{classTimer_a5199320f6c7c128ca6ca4749578633d3} 
+template$<$typename Arg, typename Res$>$ \\
+void \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+set\+Timeout (\begin{DoxyParamCaption}\item[{unsigned long}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets timeout. 
+\begin{DoxyParams}{Parameters}
+{\em t} & Target timeout. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTimer_a00bd85b917466fbc2145ee1326f1c267}\index{Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}!tick@{tick}}
+\index{tick@{tick}!Timer$<$ Arg, Res $>$@{Timer$<$ Arg, Res $>$}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \label{classTimer_a00bd85b917466fbc2145ee1326f1c267} 
+template$<$typename Arg, typename Res$>$ \\
+void \doxymbox{\hyperlink{classTimer}{Timer}}$<$ Arg, Res $>$::\+tick (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update timer and executes callback on timeout. 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{Timer_8tpp}{Timer.\+tpp}}\end{DoxyCompactItemize}

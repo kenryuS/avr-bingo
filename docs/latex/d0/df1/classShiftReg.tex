@@ -1,0 +1,102 @@
+\doxysection{Shift\+Reg Class Reference}
+\hypertarget{classShiftReg}{}\label{classShiftReg}\index{ShiftReg@{ShiftReg}}
+
+
+{\ttfamily \+\#include $<$Shift\+Reg.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}{Shift\+Reg}} (\doxymbox{\hyperlink{classPin}{Pin}} ser, \doxymbox{\hyperlink{classPin}{Pin}} srck, \doxymbox{\hyperlink{classPin}{Pin}} rck)
+\item 
+\doxymbox{\hyperlink{classShiftReg_a2ab671e3312f129a138215c3cef99808}{Shift\+Reg}} (const \doxymbox{\hyperlink{classShiftReg}{Shift\+Reg}} \&sr)
+\item 
+\doxymbox{\hyperlink{classShiftReg_afa868e8fa53571af12edde64d05daf3d}{Shift\+Reg}} (const \doxymbox{\hyperlink{classShiftReg}{Shift\+Reg}} \&\&sr)=delete
+\item 
+\doxymbox{\hyperlink{classShiftReg_ac43a5d46cfd62af1d0d8f2a05053d375}{\texorpdfstring{$\sim$}{\string~}\+Shift\+Reg}} ()=default
+\item 
+void \doxymbox{\hyperlink{classShiftReg_a7d985b622f25f748b6d4b1b123fa265f}{operator$<$$<$}} (size\+\_\+t n)
+\item 
+void \doxymbox{\hyperlink{classShiftReg_a7272cca6a9903d48aa8eff54dac672d1}{operator$<$$<$=}} (uint8\+\_\+t x)
+\item 
+void \doxymbox{\hyperlink{classShiftReg_a75ec46555777edc5aef03885b70e9d9a}{clear}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Shift Register Class. This class represents 74HC595 shift register. 
+
+\label{doc-constructors}
+\Hypertarget{classShiftReg_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{ShiftReg()}{ShiftReg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372} 
+Shift\+Reg::\+\+Shift\+Reg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classPin}{Pin}}}]{ser}{, }\item[{\doxymbox{\hyperlink{classPin}{Pin}}}]{srck}{, }\item[{\doxymbox{\hyperlink{classPin}{Pin}}}]{rck}{}\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em ser} & \doxylink{classPin}{Pin} connected to serial data input of a register. \\
+\hline
+{\em srck} & \doxylink{classPin}{Pin} connected to shift clock of a register. \\
+\hline
+{\em rck} & \doxylink{classPin}{Pin} connected to output latch of a register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShiftReg_a2ab671e3312f129a138215c3cef99808}\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{ShiftReg()}{ShiftReg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classShiftReg_a2ab671e3312f129a138215c3cef99808} 
+Shift\+Reg::\+\+Shift\+Reg (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classShiftReg}{Shift\+Reg}} \&}]{sr}{}\end{DoxyParamCaption})}
+
+Copy Constructor. \Hypertarget{classShiftReg_afa868e8fa53571af12edde64d05daf3d}\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\index{ShiftReg@{ShiftReg}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{ShiftReg()}{ShiftReg()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classShiftReg_afa868e8fa53571af12edde64d05daf3d} 
+Shift\+Reg::\+\+Shift\+Reg (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classShiftReg}{Shift\+Reg}} \&\&}]{sr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classShiftReg_ac43a5d46cfd62af1d0d8f2a05053d375}\index{ShiftReg@{ShiftReg}!````~ShiftReg@{\texorpdfstring{$\sim$}{\string~}ShiftReg}}
+\index{````~ShiftReg@{\texorpdfstring{$\sim$}{\string~}ShiftReg}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ShiftReg()}{\string~ShiftReg()}}
+{\footnotesize\ttfamily \label{classShiftReg_ac43a5d46cfd62af1d0d8f2a05053d375} 
+Shift\+Reg::\+\texorpdfstring{$\sim$}{\string~}\+Shift\+Reg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor. 
+
+\label{doc-func-members}
+\Hypertarget{classShiftReg_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classShiftReg_a75ec46555777edc5aef03885b70e9d9a}\index{ShiftReg@{ShiftReg}!clear@{clear}}
+\index{clear@{clear}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classShiftReg_a75ec46555777edc5aef03885b70e9d9a} 
+void Shift\+Reg::\+clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+shift out all data with 0. \Hypertarget{classShiftReg_a7d985b622f25f748b6d4b1b123fa265f}\index{ShiftReg@{ShiftReg}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{classShiftReg_a7d985b622f25f748b6d4b1b123fa265f} 
+void Shift\+Reg::\+operator$<$$<$ (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+Operator that performs arbitary number of shifting. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of shiftings. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classShiftReg_a7272cca6a9903d48aa8eff54dac672d1}\index{ShiftReg@{ShiftReg}!operator$<$$<$=@{operator$<$$<$=}}
+\index{operator$<$$<$=@{operator$<$$<$=}!ShiftReg@{ShiftReg}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$=()}{operator<<=()}}
+{\footnotesize\ttfamily \label{classShiftReg_a7272cca6a9903d48aa8eff54dac672d1} 
+void Shift\+Reg::\+operator$<$$<$= (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x}{}\end{DoxyParamCaption})}
+
+Loads 8-\/bit value to a register. 
+\begin{DoxyParams}{Parameters}
+{\em x} & 8-\/bit value to be loaded. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{ShiftReg_8hpp}{Shift\+Reg.\+hpp}}\end{DoxyCompactItemize}

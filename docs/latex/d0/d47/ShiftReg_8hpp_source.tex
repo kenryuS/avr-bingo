@@ -1,0 +1,33 @@
+\doxysection{Shift\+Reg.\+hpp}
+\hypertarget{ShiftReg_8hpp_source}{}\label{ShiftReg_8hpp_source}\index{include/ShiftReg.hpp@{include/ShiftReg.hpp}}
+\doxymbox{\hyperlink{ShiftReg_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_SHIFT\_REG\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_SHIFT\_REG\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Pin_8hpp}{Pin.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}{ShiftReg}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}{ShiftReg}}(\doxymbox{\hyperlink{classPin}{Pin}}\ ser,\ \doxymbox{\hyperlink{classPin}{Pin}}\ srck,\ \doxymbox{\hyperlink{classPin}{Pin}}\ rck);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classShiftReg_a2ab671e3312f129a138215c3cef99808}{ShiftReg}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}{ShiftReg}}\&\ sr);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classShiftReg_afa868e8fa53571af12edde64d05daf3d}{ShiftReg}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classShiftReg_a39e96fe886340d6234b2a3a7ab41d372}{ShiftReg}}\&\&\ sr)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classShiftReg_ac43a5d46cfd62af1d0d8f2a05053d375}{\string~ShiftReg}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classShiftReg_a7d985b622f25f748b6d4b1b123fa265f}{operator<<}}(\textcolor{keywordtype}{size\_t}\ n);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classShiftReg_a7272cca6a9903d48aa8eff54dac672d1}{operator<<=}}(uint8\_t\ x);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classShiftReg_a75ec46555777edc5aef03885b70e9d9a}{clear}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classPin}{Pin}}\ dat;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classPin}{Pin}}\ srclk;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classPin}{Pin}}\ rclk;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_SHIFT\_REG\_HPP\_\_}}
+
+\end{DoxyCode}

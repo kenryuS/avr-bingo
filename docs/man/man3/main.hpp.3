@@ -1,0 +1,161 @@
+.TH "include/main.hpp" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/main.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdint\&.h>\fP
+.br
+\fR#include 'Pin\&.hpp'\fP
+.br
+\fR#include 'ShiftReg\&.hpp'\fP
+.br
+\fR#include 'Button\&.hpp'\fP
+.br
+\fR#include 'u80\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDispParam\fP"
+.br
+.RI "Parameters for 7 segments display\&. "
+.ti -1c
+.RI "struct \fBCallOutNumberParam\fP"
+.br
+.RI "Parameters for calling out numbers\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBuint80_t\fP = \fBU80\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBingoMachineError\fP { \fBSUCCESS\fP, \fBALL_NUMBER_CALLED\fP, \fBFAILED_TO_CALL_NUMBER\fP }"
+.br
+.RI "Error codes of bingo machine\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdisplayT_CB\fP (\fBDispParam\fP *dp, int *)"
+.br
+.ti -1c
+.RI "void \fBbuttonT_CB\fP (\fBDACButtons\fP *d, int *)"
+.br
+.ti -1c
+.RI "void \fBcallOutNumber_VECT\fP (bool s, void *arg, void *)"
+.br
+.ti -1c
+.RI "void \fBresetBingo_VECT\fP (bool s, void *arg, void *)"
+.br
+.ti -1c
+.RI "void \fBsetup\fP (void)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "using \fBuint80_t\fP = \fBU80\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBBingoMachineError\fP"
+
+.PP
+Error codes of bingo machine\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BISUCCESS \fP
+.TP
+\f(BIALL_NUMBER_CALLED \fP
+Interrupt is successfully exited\&. 
+.TP
+\f(BIFAILED_TO_CALL_NUMBER \fP
+All of numbers has been called out, requires parameters reset\&.
+
+.PP
+Could not call out number\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void buttonT_CB (\fBDACButtons\fP * d, int * )"
+\fBCallback\fP function for scanning button states\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fId\fP Pointer to DAC buttons 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBDACButtons\fP\&. 
+.RE
+.PP
+
+.SS "void callOutNumber_VECT (bool s, void * arg, void * )"
+Interrupt vector for calling out number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP current state of button\&. 
+.br
+\fIarg\fP Pointer to parameters for calling out number 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBCallOutNumberParam\fP\&. 
+.RE
+.PP
+
+.SS "void displayT_CB (\fBDispParam\fP * dp, int * )"
+\fBCallback\fP function for displaying number to 7 segments display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdp\fP Pointer to display parameters 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBDispParam\fP\&. 
+.RE
+.PP
+
+.SS "int main (void )"
+Main entry point of a bingo machine\&. 
+.SS "void resetBingo_VECT (bool s, void * arg, void * )"
+Interrupt vector for reseting parameters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP current state of button\&. 
+.br
+\fIarg\fP Pointer to parameters for calling out number 
+.RE
+.PP
+\fBSee also\fP
+.RS 4
+\fBCallOutNumberParam\fP\&. 
+.RE
+.PP
+
+.SS "void setup (void )"
+Setups microcontroler ports, timer, and random number generator\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

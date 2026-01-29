@@ -1,0 +1,108 @@
+\doxysection{DACButtons Class Reference}
+\hypertarget{classDACButtons}{}\label{classDACButtons}\index{DACButtons@{DACButtons}}
+
+
+DAC buttons class.  
+
+
+
+
+{\ttfamily \+\#include $<$Button.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}{DACButtons}} (\doxymbox{\hyperlink{classADCC}{ADCC}} \texorpdfstring{$\ast$}{*}adc, enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{ADCC::\+\+Channel}} ch, size\+\_\+t num, uint8\+\_\+t \texorpdfstring{$\ast$}{*}map, uint8\+\_\+t margin, \doxymbox{\hyperlink{classButton}{Button}} \texorpdfstring{$\ast$}{*}btns)
+\item 
+\doxymbox{\hyperlink{classDACButtons_a7dc7d269b56271101bbc22f88661bbe4}{DACButtons}} (const \doxymbox{\hyperlink{classDACButtons}{DACButtons}} \&)=delete
+\item 
+\doxymbox{\hyperlink{classDACButtons_a5cc9c370114bc898898dd5aba7af74e0}{DACButtons}} (const \doxymbox{\hyperlink{classDACButtons}{DACButtons}} \&\&)=delete
+\item 
+size\+\_\+t \doxymbox{\hyperlink{classDACButtons_a577bba826cf006cad860de202da45a6d}{get\+Button\+Num}} ()
+\item 
+\doxymbox{\hyperlink{classButton}{Button}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classDACButtons_a012b4ae9f8bace6afd6222ca4cbd4c6e}{get\+Buttons}} ()
+\item 
+bool \doxymbox{\hyperlink{classDACButtons_acf0a55e323df55fea30290f1efab7aaa}{get\+State}} (size\+\_\+t index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DAC buttons class. 
+
+Buttons with digital to analog converter, without multi-\/button detection. 
+
+\label{doc-constructors}
+\Hypertarget{classDACButtons_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{DACButtons()}{DACButtons()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2} 
+DACButtons::\+\+DACButtons (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classADCC}{ADCC}} \texorpdfstring{$\ast$}{*}}]{adc}{, }\item[{enum \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{ADCC::\+\+Channel}}}]{ch}{, }\item[{size\+\_\+t}]{num}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{map}{, }\item[{uint8\+\_\+t}]{margin}{, }\item[{\doxymbox{\hyperlink{classButton}{Button}} \texorpdfstring{$\ast$}{*}}]{btns}{}\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em adc} & ADC to read value from DAC. \\
+\hline
+{\em ch} & ADC channel to read from. \\
+\hline
+{\em num} & Number of buttons to handel. \\
+\hline
+{\em map} & Map of DAC value in percentage to buttons. \\
+\hline
+{\em margin} & Margin of DAC value. \\
+\hline
+{\em btns} & Array of buttons \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classButton}{Button}. 
+\end{DoxySeeAlso}
+\Hypertarget{classDACButtons_a7dc7d269b56271101bbc22f88661bbe4}\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{DACButtons()}{DACButtons()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classDACButtons_a7dc7d269b56271101bbc22f88661bbe4} 
+DACButtons::\+\+DACButtons (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classDACButtons}{DACButtons}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classDACButtons_a5cc9c370114bc898898dd5aba7af74e0}\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\index{DACButtons@{DACButtons}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{DACButtons()}{DACButtons()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classDACButtons_a5cc9c370114bc898898dd5aba7af74e0} 
+DACButtons::\+\+DACButtons (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classDACButtons}{DACButtons}} \&\&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classDACButtons_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDACButtons_a577bba826cf006cad860de202da45a6d}\index{DACButtons@{DACButtons}!getButtonNum@{getButtonNum}}
+\index{getButtonNum@{getButtonNum}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{getButtonNum()}{getButtonNum()}}
+{\footnotesize\ttfamily \label{classDACButtons_a577bba826cf006cad860de202da45a6d} 
+size\+\_\+t DACButtons::\+get\+Button\+Num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets number of buttons. \Hypertarget{classDACButtons_a012b4ae9f8bace6afd6222ca4cbd4c6e}\index{DACButtons@{DACButtons}!getButtons@{getButtons}}
+\index{getButtons@{getButtons}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{getButtons()}{getButtons()}}
+{\footnotesize\ttfamily \label{classDACButtons_a012b4ae9f8bace6afd6222ca4cbd4c6e} 
+\doxymbox{\hyperlink{classButton}{Button}} \texorpdfstring{$\ast$}{*} DACButtons::\+get\+Buttons (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gets array of buttons. \Hypertarget{classDACButtons_acf0a55e323df55fea30290f1efab7aaa}\index{DACButtons@{DACButtons}!getState@{getState}}
+\index{getState@{getState}!DACButtons@{DACButtons}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{classDACButtons_acf0a55e323df55fea30290f1efab7aaa} 
+bool DACButtons::\+get\+State (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+Gets state of specified button. 
+\begin{DoxyParams}{Parameters}
+{\em index} & Index in buttons array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current state of the button. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{Button_8hpp}{Button.\+hpp}}\end{DoxyCompactItemize}

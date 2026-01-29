@@ -1,0 +1,94 @@
+\doxysection{include/\+\+Timer.hpp File Reference}
+\hypertarget{Timer_8hpp}{}\label{Timer_8hpp}\index{include/Timer.hpp@{include/Timer.hpp}}
+{\ttfamily \+\#include "{}defs.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Timer.\+tpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{Timer_8hpp_aedb9b427a0c43a763bd8bd135585f913}{clock\+Cycles\+Per\+Microsecond}}~(\doxymbox{\hyperlink{defs_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}} /\+ 1000000L)
+\item 
+\+\#define \doxymbox{\hyperlink{Timer_8hpp_a262d28355fa4b64b12743b5e93f7516b}{clock\+Cycles\+To\+Microseconds}}(a)
+\item 
+\+\#define \doxymbox{\hyperlink{Timer_8hpp_ab1d369d575d0937b2064adbaab91594d}{MICROSECONDS\+\_\+\+PER\+\_\+\+TIMER0\+\_\+\+OVERFLOW}}~(\doxymbox{\hyperlink{Timer_8hpp_a262d28355fa4b64b12743b5e93f7516b}{clock\+Cycles\+To\+Microseconds}}(64\texorpdfstring{$\ast$}{*}256))
+\item 
+\+\#define \doxymbox{\hyperlink{Timer_8hpp_ab640966289e34d6fe31434f37090e6e6}{MILLIS\+\_\+\+INC}}~(\doxymbox{\hyperlink{Timer_8hpp_ab1d369d575d0937b2064adbaab91594d}{MICROSECONDS\+\_\+\+PER\+\_\+\+TIMER0\+\_\+\+OVERFLOW}} /\+ 1000)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Arg, typename Res$>$ }\\using \doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback}} = void(Arg\texorpdfstring{$\ast$}{*}, Res\texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{Timer_8hpp_a1f7b00cc7b7d74fdeac6743a8ac536d7}{timer\+Setup}} (void)
+\item 
+unsigned long \doxymbox{\hyperlink{Timer_8hpp_a1871228c14c912ca1479cf826ddcb07f}{millis}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{Timer_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Timer_8hpp_aedb9b427a0c43a763bd8bd135585f913}\index{Timer.hpp@{Timer.hpp}!clockCyclesPerMicrosecond@{clockCyclesPerMicrosecond}}
+\index{clockCyclesPerMicrosecond@{clockCyclesPerMicrosecond}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{clockCyclesPerMicrosecond}{clockCyclesPerMicrosecond}}
+{\footnotesize\ttfamily \label{Timer_8hpp_aedb9b427a0c43a763bd8bd135585f913} 
+\+\#define clock\+Cycles\+Per\+Microsecond~(\doxymbox{\hyperlink{defs_8hpp_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}} /\+ 1000000L)}
+
+Macros refered from Arduino\textquotesingle{}s implementation. \Hypertarget{Timer_8hpp_a262d28355fa4b64b12743b5e93f7516b}\index{Timer.hpp@{Timer.hpp}!clockCyclesToMicroseconds@{clockCyclesToMicroseconds}}
+\index{clockCyclesToMicroseconds@{clockCyclesToMicroseconds}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{clockCyclesToMicroseconds}{clockCyclesToMicroseconds}}
+{\footnotesize\ttfamily \label{Timer_8hpp_a262d28355fa4b64b12743b5e93f7516b} 
+\+\#define clock\+Cycles\+To\+Microseconds(\begin{DoxyParamCaption}\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ /\ \doxymbox{\hyperlink{Timer_8hpp_aedb9b427a0c43a763bd8bd135585f913}{clockCyclesPerMicrosecond}})}
+
+\end{DoxyCode}
+Macros refered from Arduino\textquotesingle{}s implementation. \Hypertarget{Timer_8hpp_ab1d369d575d0937b2064adbaab91594d}\index{Timer.hpp@{Timer.hpp}!MICROSECONDS\_PER\_TIMER0\_OVERFLOW@{MICROSECONDS\_PER\_TIMER0\_OVERFLOW}}
+\index{MICROSECONDS\_PER\_TIMER0\_OVERFLOW@{MICROSECONDS\_PER\_TIMER0\_OVERFLOW}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{MICROSECONDS\_PER\_TIMER0\_OVERFLOW}{MICROSECONDS\_PER\_TIMER0\_OVERFLOW}}
+{\footnotesize\ttfamily \label{Timer_8hpp_ab1d369d575d0937b2064adbaab91594d} 
+\+\#define MICROSECONDS\+\_\+\+PER\+\_\+\+TIMER0\+\_\+\+OVERFLOW~(\doxymbox{\hyperlink{Timer_8hpp_a262d28355fa4b64b12743b5e93f7516b}{clock\+Cycles\+To\+Microseconds}}(64\texorpdfstring{$\ast$}{*}256))}
+
+Macros refered from Arduino\textquotesingle{}s implementation. \Hypertarget{Timer_8hpp_ab640966289e34d6fe31434f37090e6e6}\index{Timer.hpp@{Timer.hpp}!MILLIS\_INC@{MILLIS\_INC}}
+\index{MILLIS\_INC@{MILLIS\_INC}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{MILLIS\_INC}{MILLIS\_INC}}
+{\footnotesize\ttfamily \label{Timer_8hpp_ab640966289e34d6fe31434f37090e6e6} 
+\+\#define MILLIS\+\_\+\+INC~(\doxymbox{\hyperlink{Timer_8hpp_ab1d369d575d0937b2064adbaab91594d}{MICROSECONDS\+\_\+\+PER\+\_\+\+TIMER0\+\_\+\+OVERFLOW}} /\+ 1000)}
+
+Macros refered from Arduino\textquotesingle{}s implementation. 
+
+\label{doc-typedef-members}
+\Hypertarget{Timer_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}\index{Timer.hpp@{Timer.hpp}!Callback@{Callback}}
+\index{Callback@{Callback}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{Callback}{Callback}}
+{\footnotesize\ttfamily \label{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df} 
+template$<$typename Arg, typename Res$>$ \\
+using \doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback}} = void(Arg\texorpdfstring{$\ast$}{*}, Res\texorpdfstring{$\ast$}{*})}
+
+Function signiture for timer\textquotesingle{}s callback \begin{DoxySeeAlso}{See also}
+\doxylink{classTimer}{Timer}. 
+\end{DoxySeeAlso}
+
+
+\label{doc-func-members}
+\Hypertarget{Timer_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Timer_8hpp_a1871228c14c912ca1479cf826ddcb07f}\index{Timer.hpp@{Timer.hpp}!millis@{millis}}
+\index{millis@{millis}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{millis()}{millis()}}
+{\footnotesize\ttfamily \label{Timer_8hpp_a1871228c14c912ca1479cf826ddcb07f} 
+unsigned long millis (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+refered from Arduino\textquotesingle{}s implementation \Hypertarget{Timer_8hpp_a1f7b00cc7b7d74fdeac6743a8ac536d7}\index{Timer.hpp@{Timer.hpp}!timerSetup@{timerSetup}}
+\index{timerSetup@{timerSetup}!Timer.hpp@{Timer.hpp}}
+\doxysubsubsection{\texorpdfstring{timerSetup()}{timerSetup()}}
+{\footnotesize\ttfamily \label{Timer_8hpp_a1f7b00cc7b7d74fdeac6743a8ac536d7} 
+void timer\+Setup (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Setup 8-\/bit timer 0 with appropriate register setting. 

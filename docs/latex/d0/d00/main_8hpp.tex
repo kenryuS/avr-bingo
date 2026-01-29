@@ -1,0 +1,168 @@
+\doxysection{include/\+main.hpp File Reference}
+\hypertarget{main_8hpp}{}\label{main_8hpp}\index{include/main.hpp@{include/main.hpp}}
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include "{}Pin.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Shift\+Reg.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Button.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}u80.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structDispParam}{Disp\+Param}}
+\begin{DoxyCompactList}\small\item\em Parameters for 7 segments display. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structCallOutNumberParam}{Call\+Out\+Number\+Param}}
+\begin{DoxyCompactList}\small\item\em Parameters for calling out numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3}{uint80\+\_\+t}} = \doxymbox{\hyperlink{classU80}{U80}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0}{Bingo\+Machine\+Error}} \{ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}}
+, \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0a7dfb16f8d3000288c3739c695559bf62}{ALL\+\_\+\+NUMBER\+\_\+\+CALLED}}
+, \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ab8c975adb3b20d49070a24e7689dff36}{FAILED\+\_\+\+TO\+\_\+\+CALL\+\_\+\+NUMBER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes of bingo machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8hpp_a9ed07fdda2546e129021aa9245a90ba7}{display\+T\+\_\+\+CB}} (\doxymbox{\hyperlink{structDispParam}{Disp\+Param}} \texorpdfstring{$\ast$}{*}dp, int \texorpdfstring{$\ast$}{*})
+\item 
+void \doxymbox{\hyperlink{main_8hpp_ae869b80d64eea9fdc8310b45476aa87c}{button\+T\+\_\+\+CB}} (\doxymbox{\hyperlink{classDACButtons}{DACButtons}} \texorpdfstring{$\ast$}{*}d, int \texorpdfstring{$\ast$}{*})
+\item 
+void \doxymbox{\hyperlink{main_8hpp_a92cef3e09194f90e007dd447f2dd339e}{call\+Out\+Number\+\_\+\+VECT}} (bool s, void \texorpdfstring{$\ast$}{*}arg, void \texorpdfstring{$\ast$}{*})
+\item 
+void \doxymbox{\hyperlink{main_8hpp_afd331d2fe607ff1959b7009c122eaf29}{reset\+Bingo\+\_\+\+VECT}} (bool s, void \texorpdfstring{$\ast$}{*}arg, void \texorpdfstring{$\ast$}{*})
+\item 
+void \doxymbox{\hyperlink{main_8hpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup}} (void)
+\item 
+int \doxymbox{\hyperlink{main_8hpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{main_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3}\index{main.hpp@{main.hpp}!uint80\_t@{uint80\_t}}
+\index{uint80\_t@{uint80\_t}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{uint80\_t}{uint80\_t}}
+{\footnotesize\ttfamily \label{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3} 
+using \doxymbox{\hyperlink{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3}{uint80\+\_\+t}} = \doxymbox{\hyperlink{classU80}{U80}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{main_8hpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0}\index{main.hpp@{main.hpp}!BingoMachineError@{BingoMachineError}}
+\index{BingoMachineError@{BingoMachineError}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{BingoMachineError}{BingoMachineError}}
+{\footnotesize\ttfamily \label{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0} 
+enum \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0}{Bingo\+Machine\+Error}}}
+
+
+
+Error codes of bingo machine. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUCCESS@{SUCCESS}!main.hpp@{main.hpp}}
+\index{main.hpp@{main.hpp}!SUCCESS@{SUCCESS}}
+}\Hypertarget{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ac7f69f7c9e5aea9b8f54cf02870e2bf8}\label{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ac7f69f7c9e5aea9b8f54cf02870e2bf8} 
+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL\_NUMBER\_CALLED@{ALL\_NUMBER\_CALLED}!main.hpp@{main.hpp}}
+\index{main.hpp@{main.hpp}!ALL\_NUMBER\_CALLED@{ALL\_NUMBER\_CALLED}}
+}\Hypertarget{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0a7dfb16f8d3000288c3739c695559bf62}\label{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0a7dfb16f8d3000288c3739c695559bf62} 
+ALL\+\_\+\+NUMBER\+\_\+\+CALLED&Interrupt is successfully exited. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAILED\_TO\_CALL\_NUMBER@{FAILED\_TO\_CALL\_NUMBER}!main.hpp@{main.hpp}}
+\index{main.hpp@{main.hpp}!FAILED\_TO\_CALL\_NUMBER@{FAILED\_TO\_CALL\_NUMBER}}
+}\Hypertarget{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ab8c975adb3b20d49070a24e7689dff36}\label{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ab8c975adb3b20d49070a24e7689dff36} 
+FAILED\+\_\+\+TO\+\_\+\+CALL\+\_\+\+NUMBER&All of numbers has been called out, requires parameters reset.
+
+Could not call out number. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8hpp_ae869b80d64eea9fdc8310b45476aa87c}\index{main.hpp@{main.hpp}!buttonT\_CB@{buttonT\_CB}}
+\index{buttonT\_CB@{buttonT\_CB}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{buttonT\_CB()}{buttonT\_CB()}}
+{\footnotesize\ttfamily \label{main_8hpp_ae869b80d64eea9fdc8310b45476aa87c} 
+void button\+T\+\_\+\+CB (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classDACButtons}{DACButtons}} \texorpdfstring{$\ast$}{*}}]{d}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\doxylink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback} function for scanning button states. 
+\begin{DoxyParams}{Parameters}
+{\em d} & Pointer to DAC buttons \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{classDACButtons}{DACButtons}. 
+\end{DoxySeeAlso}
+\Hypertarget{main_8hpp_a92cef3e09194f90e007dd447f2dd339e}\index{main.hpp@{main.hpp}!callOutNumber\_VECT@{callOutNumber\_VECT}}
+\index{callOutNumber\_VECT@{callOutNumber\_VECT}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{callOutNumber\_VECT()}{callOutNumber\_VECT()}}
+{\footnotesize\ttfamily \label{main_8hpp_a92cef3e09194f90e007dd447f2dd339e} 
+void call\+Out\+Number\+\_\+\+VECT (\begin{DoxyParamCaption}\item[{bool}]{s}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+Interrupt vector for calling out number. 
+\begin{DoxyParams}{Parameters}
+{\em s} & current state of button. \\
+\hline
+{\em arg} & Pointer to parameters for calling out number \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{structCallOutNumberParam}{Call\+Out\+Number\+Param}. 
+\end{DoxySeeAlso}
+\Hypertarget{main_8hpp_a9ed07fdda2546e129021aa9245a90ba7}\index{main.hpp@{main.hpp}!displayT\_CB@{displayT\_CB}}
+\index{displayT\_CB@{displayT\_CB}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{displayT\_CB()}{displayT\_CB()}}
+{\footnotesize\ttfamily \label{main_8hpp_a9ed07fdda2546e129021aa9245a90ba7} 
+void display\+T\+\_\+\+CB (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structDispParam}{Disp\+Param}} \texorpdfstring{$\ast$}{*}}]{dp}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\doxylink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback} function for displaying number to 7 segments display. 
+\begin{DoxyParams}{Parameters}
+{\em dp} & Pointer to display parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{structDispParam}{Disp\+Param}. 
+\end{DoxySeeAlso}
+\Hypertarget{main_8hpp_a840291bc02cba5474a4cb46a9b9566fe}\index{main.hpp@{main.hpp}!main@{main}}
+\index{main@{main}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8hpp_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Main entry point of a bingo machine. \Hypertarget{main_8hpp_afd331d2fe607ff1959b7009c122eaf29}\index{main.hpp@{main.hpp}!resetBingo\_VECT@{resetBingo\_VECT}}
+\index{resetBingo\_VECT@{resetBingo\_VECT}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{resetBingo\_VECT()}{resetBingo\_VECT()}}
+{\footnotesize\ttfamily \label{main_8hpp_afd331d2fe607ff1959b7009c122eaf29} 
+void reset\+Bingo\+\_\+\+VECT (\begin{DoxyParamCaption}\item[{bool}]{s}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{arg}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+Interrupt vector for reseting parameters. 
+\begin{DoxyParams}{Parameters}
+{\em s} & current state of button. \\
+\hline
+{\em arg} & Pointer to parameters for calling out number \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{structCallOutNumberParam}{Call\+Out\+Number\+Param}. 
+\end{DoxySeeAlso}
+\Hypertarget{main_8hpp_a7dfd9b79bc5a37d7df40207afbc5431f}\index{main.hpp@{main.hpp}!setup@{setup}}
+\index{setup@{setup}!main.hpp@{main.hpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{main_8hpp_a7dfd9b79bc5a37d7df40207afbc5431f} 
+void setup (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Setups microcontroler ports, timer, and random number generator. 

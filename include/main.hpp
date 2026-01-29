@@ -33,36 +33,59 @@ static uint8_t DACBTNMAPPING[4] = {
     12
 };
 
+/*! @enum BingoMachineError
+ * @brief Error codes of bingo machine.
+ */
 typedef enum {
-    SUCCESS,
-    ALL_NUMBER_CALLED,
-    FAILED_TO_CALL_NUMBER
+    SUCCESS, /*! Interrupt is successfully exited. */
+    ALL_NUMBER_CALLED, /*! All of numbers has been called out, requires parameters reset. */
+    FAILED_TO_CALL_NUMBER /*! Could not call out number. */
 } BingoMachineError;
 
+/*! @struct DispParam
+ * @brief Parameters for 7 segments display.
+ */
 typedef struct {
-    ShiftReg* sr;
-    uint8_t n;
-    bool inHex;
-    bool omitTensZero;
-    bool digit;
+    ShiftReg* sr; /*! Pointer to shift register object @see ShiftReg. */
+    uint8_t n; /*! Number to be displayed. */
+    bool inHex; /*! Whether to display number as hexadecimal. */
+    bool omitTensZero; /*! Whether to omit tens zero when displaying single digit number */
+    bool digit; /*! digit to be shown. Tens for true and ones for false. */
 } DispParam;
 
+/*! @struct CallOutNumberParam
+ * @brief Parameters for calling out numbers.
+ */
 typedef struct {
-    uint8_t* n;
-    BingoMachineError retCode;
-    uint80_t calledNums;
+    uint8_t* n; /*! Current called number. */
+    BingoMachineError retCode; /*! Return code of interrupt @see callOutNumber_VECT. */
+    uint80_t calledNums; /*! uint80_t that manages called numbers @see U80. */
 } CallOutNumberParam;
 
+/*! Callback function for displaying number to 7 segments display.
+ * @param dp Pointer to display parameters @see DispParam.
+ */
 void displayT_CB(DispParam* dp, int*);
+/*! Callback function for scanning button states.
+ * @param d Pointer to DAC buttons @see DACButtons.
+ */
 void buttonT_CB(DACButtons* d, int*);
 
-void btn1_VECT(bool s, void* arg, void*);
-void btn2_VECT(bool s, void* arg, void*);
+/*! Interrupt vector for calling out number.
+ * @param s current state of button.
+ * @param arg Pointer to parameters for calling out number @see CallOutNumberParam.
+ */
 void callOutNumber_VECT(bool s, void* arg, void*);
+/*! Interrupt vector for reseting parameters.
+ * @param s current state of button.
+ * @param arg Pointer to parameters for calling out number @see CallOutNumberParam.
+ */
 void resetBingo_VECT(bool s, void* arg, void*);
 
+/*! Setups microcontroler ports, timer, and random number generator. */
 void setup(void);
 
+/*! Main entry point of a bingo machine. */
 int main(void);
 
 #endif // __MAIN_HPP__

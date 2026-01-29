@@ -1,0 +1,67 @@
+.TH "include/Button.hpp" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Button.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdint\&.h>\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+\fR#include 'Pin\&.hpp'\fP
+.br
+\fR#include 'ADC\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBButton\fP"
+.br
+.ti -1c
+.RI "class \fBDACButtons\fP"
+.br
+.RI "DAC buttons class\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBVirtualButtonStateChangeInterruptVect\fP = void(bool, void*, void*)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBEMPTY_VBSCIV\fP (bool, void *, void *)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "using \fBVirtualButtonStateChangeInterruptVect\fP = void(bool, void*, void*)"
+Function signiture for constructing virtual interrupt vector 
+.PP
+\fBSee also\fP
+.RS 4
+\fBButton\fP\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void EMPTY_VBSCIV (bool , void * , void * )\fR [inline]\fP"
+Empty virtual button state change interrupt vector function\&. The placeholder function for Buttons' interrupt 
+.PP
+\fBSee also\fP
+.RS 4
+\fBButton\fP\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

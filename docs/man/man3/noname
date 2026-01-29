@@ -1,0 +1,7 @@
+.TH "" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include ADC\&.hpp Button\&.hpp defs\&.hpp main\&.hpp Pin\&.hpp ShiftReg\&.hpp Timer\&.hpp Timer\&.tpp u80\&.hpp 
+.PP
+

@@ -1,0 +1,46 @@
+.TH "CallOutNumberParam" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CallOutNumberParam \- Parameters for calling out numbers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <main\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t * \fBn\fP"
+.br
+.ti -1c
+.RI "\fBBingoMachineError\fP \fBretCode\fP"
+.br
+.ti -1c
+.RI "\fBuint80_t\fP \fBcalledNums\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Parameters for calling out numbers\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBuint80_t\fP CallOutNumberParam::calledNums"
+Return code of interrupt 
+.PP
+\fBSee also\fP
+.RS 4
+\fBcallOutNumber_VECT\fP\&. 
+.RE
+.PP
+
+.SS "uint8_t* CallOutNumberParam::n"
+
+.SS "\fBBingoMachineError\fP CallOutNumberParam::retCode"
+Current called number\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

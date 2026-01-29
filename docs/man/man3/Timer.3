@@ -1,0 +1,117 @@
+.TH "Timer< Arg, Res >" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Timer< Arg, Res > \- Non-blocking timer\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimer\fP (\fBCallback\fP< Arg, Res > f, Arg *arg, Res *res, unsigned long tout)"
+.br
+.ti -1c
+.RI "\fB~Timer\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBsetTimeout\fP (unsigned long t)"
+.br
+.ti -1c
+.RI "unsigned long \fBgetTimeout\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetArg\fP (Arg *arg)"
+.br
+.ti -1c
+.RI "Arg * \fBgetArg\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetRes\fP (Res *res)"
+.br
+.ti -1c
+.RI "Res * \fBgetRes\fP ()"
+.br
+.ti -1c
+.RI "void \fBtick\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Arg, typename Res>
+.br
+class Timer< Arg, Res >"Non-blocking timer\&. 
+
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIArg\fP Type of callback argument(s)\&. 
+.br
+\fIRes\fP Type of callback return value(s)\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename Arg, typename Res> \fBTimer\fP< Arg, Res >::Timer (\fBCallback\fP< Arg, Res > f, Arg * arg, Res * res, unsigned long tout)\fR [inline]\fP"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP \fBCallback\fP function to be executed\&. 
+.br
+\fIarg\fP Pointer to argument(s) of callback function with type Arg\&. 
+.br
+\fIres\fP Pointer to return(s) of callback function with type Res\&. 
+.br
+\fItout\fP Time out of timer\&. 
+.RE
+.PP
+
+.SS "template<typename Arg, typename Res> \fBTimer\fP< Arg, Res >::~\fBTimer\fP ()\fR [default]\fP"
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Arg, typename Res> Arg * \fBTimer\fP< Arg, Res >::getArg ()\fR [inline]\fP"
+Gets argument pointer\&. 
+.SS "template<typename Arg, typename Res> Res * \fBTimer\fP< Arg, Res >::getRes ()\fR [inline]\fP"
+Gets return value pointer\&. 
+.SS "template<typename Arg, typename Res> unsigned long \fBTimer\fP< Arg, Res >::getTimeout ()\fR [inline]\fP"
+Gets timeout\&. 
+.SS "template<typename Arg, typename Res> void \fBTimer\fP< Arg, Res >::setArg (Arg * arg)\fR [inline]\fP"
+Sets argument through pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Pointer to argument(s)\&. 
+.RE
+.PP
+
+.SS "template<typename Arg, typename Res> void \fBTimer\fP< Arg, Res >::setRes (Res * res)\fR [inline]\fP"
+Sets return through pointer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIres\fP Pointer to return value(s)\&. 
+.RE
+.PP
+
+.SS "template<typename Arg, typename Res> void \fBTimer\fP< Arg, Res >::setTimeout (unsigned long t)\fR [inline]\fP"
+Sets timeout\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP Target timeout\&. 
+.RE
+.PP
+
+.SS "template<typename Arg, typename Res> void \fBTimer\fP< Arg, Res >::tick ()\fR [inline]\fP"
+Update timer and executes callback on timeout\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

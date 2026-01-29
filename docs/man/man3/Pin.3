@@ -1,0 +1,153 @@
+.TH "Pin" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Pin \- \fBPin\fP class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Pin\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPin\fP (uint8_t *pt, uint8_t pn)"
+.br
+.RI "Constructor\&. "
+.ti -1c
+.RI "\fBPin\fP (const \fBPin\fP &p)"
+.br
+.RI "Copy constructor\&. "
+.ti -1c
+.RI "\fBPin\fP (const \fBPin\fP &&p) noexcept"
+.br
+.RI "Move constructor\&. "
+.ti -1c
+.RI "\fB~Pin\fP ()=default"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "\fBPin\fP & \fBoperator=\fP (const \fBPin\fP &p)"
+.br
+.RI "Copy assignment\&. "
+.ti -1c
+.RI "void \fBsetPort\fP (uint8_t *prt)"
+.br
+.RI "Sets port address\&. "
+.ti -1c
+.RI "uint8_t * \fBgetPort\fP ()"
+.br
+.RI "Gets port address\&. "
+.ti -1c
+.RI "void \fBsetPin\fP (uint8_t pn)"
+.br
+.RI "Sets pin index\&. "
+.ti -1c
+.RI "uint8_t \fBgetPin\fP ()"
+.br
+.RI "Gets pin index\&. "
+.ti -1c
+.RI "bool \fBgetState\fP ()"
+.br
+.RI "Gets digital state of a pin\&. "
+.ti -1c
+.RI "void \fBsetState\fP (bool x)"
+.br
+.RI "Sets digital state of a pin\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBPin\fP class\&. 
+
+This class represents a pin of microcontroler by specifying port and pin\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Pin::Pin (uint8_t * pt, uint8_t pn)"
+
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpt\fP Pointer to port register\&. 
+.br
+\fIpn\fP \fBPin\fP index\&. 
+.RE
+.PP
+
+.SS "Pin::Pin (const \fBPin\fP & p)"
+
+.PP
+Copy constructor\&. 
+.SS "Pin::Pin (const \fBPin\fP && p)\fR [noexcept]\fP"
+
+.PP
+Move constructor\&. Behaves same as copy constructor 
+.PP
+\fBSee also\fP
+.RS 4
+\fBPin(const Pin& p)\fP\&. 
+.RE
+.PP
+
+.SS "Pin::~Pin ()\fR [default]\fP"
+
+.PP
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "uint8_t Pin::getPin ()"
+
+.PP
+Gets pin index\&. 
+.SS "uint8_t * Pin::getPort ()"
+
+.PP
+Gets port address\&. 
+.SS "bool Pin::getState ()"
+
+.PP
+Gets digital state of a pin\&. 
+.SS "\fBPin\fP & Pin::operator= (const \fBPin\fP & p)"
+
+.PP
+Copy assignment\&. 
+.SS "void Pin::setPin (uint8_t pn)"
+
+.PP
+Sets pin index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpn\fP Index of a pin\&. 
+.RE
+.PP
+
+.SS "void Pin::setPort (uint8_t * prt)"
+
+.PP
+Sets port address\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprt\fP Pointer to port\&. 
+.RE
+.PP
+
+.SS "void Pin::setState (bool x)"
+
+.PP
+Sets digital state of a pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Target state of a pin\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

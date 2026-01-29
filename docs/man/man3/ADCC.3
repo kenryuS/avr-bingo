@@ -1,0 +1,143 @@
+.TH "ADCC" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADCC \- Single Ended 10 bits ADC\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ADC\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBChannel\fP { \fBchannel_0\fP, \fBchannel_1\fP, \fBchannel_2\fP, \fBchannel_3\fP, \fBchannel_4\fP, \fBchannel_5\fP, \fBchannel_6\fP, \fBchannel_7\fP }"
+.br
+.ti -1c
+.RI "enum \fBVRef\fP { \fBvref_vcc\fP, \fBvref_aref\fP, \fBvref_11\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBADCC\fP (enum \fBVRef\fP vr)"
+.br
+.ti -1c
+.RI "\fBADCC\fP (const \fBADCC\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBADCC\fP (const \fBADCC\fP &&)=delete"
+.br
+.ti -1c
+.RI "void \fBsetVRef\fP (enum \fBVRef\fP vr)"
+.br
+.ti -1c
+.RI "enum \fBVRef\fP \fBgetVRef\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetChannel\fP (enum \fBChannel\fP c)"
+.br
+.ti -1c
+.RI "enum \fBChannel\fP \fBgetChannel\fP ()"
+.br
+.ti -1c
+.RI "uint16_t \fBread\fP (enum \fBChannel\fP c)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Single Ended 10 bits ADC\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBADCC::Channel\fP"
+ADC channel enumerations\&. Represents ADC0~7 which is mapped to PORTA\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIchannel_0 \fP
+.TP
+\f(BIchannel_1 \fP
+.TP
+\f(BIchannel_2 \fP
+.TP
+\f(BIchannel_3 \fP
+.TP
+\f(BIchannel_4 \fP
+.TP
+\f(BIchannel_5 \fP
+.TP
+\f(BIchannel_6 \fP
+.TP
+\f(BIchannel_7 \fP
+.SS "enum \fBADCC::VRef\fP"
+ADC voltage reference type enumerations\&. Represents available voltage reference types for ADC\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIvref_vcc \fP
+.TP
+\f(BIvref_aref \fP
+.TP
+\f(BIvref_11 \fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ADCC::ADCC (enum \fBVRef\fP vr)"
+Constructor\&. Sets voltage reference, prescaler to 16, and enable ADC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvr\fP voltage reference type\&. 
+.RE
+.PP
+
+.SS "ADCC::ADCC (const \fBADCC\fP & )\fR [delete]\fP"
+
+.SS "ADCC::ADCC (const \fBADCC\fP && )\fR [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "enum \fBChannel\fP ADCC::getChannel ()"
+Gets current ADC channel\&. 
+.SS "enum \fBVRef\fP ADCC::getVRef ()"
+Gets current voltage reference type\&. 
+.SS "uint16_t ADCC::read (enum \fBChannel\fP c)"
+Starts single shot ADC conversion\&. This operation is blocking\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP ADC channel to be read from\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Contents of ADC register; conversion result\&. 
+.RE
+.PP
+
+.SS "void ADCC::setChannel (enum \fBChannel\fP c)"
+Sets ADC channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP target ADC channel\&. 
+.RE
+.PP
+
+.SS "void ADCC::setVRef (enum \fBVRef\fP vr)"
+Sets voltage reference type\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvr\fP target voltage reference\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

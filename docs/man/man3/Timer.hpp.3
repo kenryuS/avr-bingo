@@ -1,0 +1,81 @@
+.TH "include/Timer.hpp" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/Timer.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'defs\&.hpp'\fP
+.br
+\fR#include 'Timer\&.tpp'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBclockCyclesPerMicrosecond\fP   (\fBF_CPU\fP / 1000000L)"
+.br
+.ti -1c
+.RI "#define \fBclockCyclesToMicroseconds\fP(a)"
+.br
+.ti -1c
+.RI "#define \fBMICROSECONDS_PER_TIMER0_OVERFLOW\fP   (\fBclockCyclesToMicroseconds\fP(64*256))"
+.br
+.ti -1c
+.RI "#define \fBMILLIS_INC\fP   (\fBMICROSECONDS_PER_TIMER0_OVERFLOW\fP / 1000)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "template<typename Arg, typename Res> using \fBCallback\fP = void(Arg*, Res*)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtimerSetup\fP (void)"
+.br
+.ti -1c
+.RI "unsigned long \fBmillis\fP (void)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define clockCyclesPerMicrosecond   (\fBF_CPU\fP / 1000000L)"
+Macros refered from Arduino's implementation\&. 
+.SS "#define clockCyclesToMicroseconds( a)"
+\fBValue:\fP
+.nf
+((a) / clockCyclesPerMicrosecond)
+.PP
+.fi
+Macros refered from Arduino's implementation\&. 
+.SS "#define MICROSECONDS_PER_TIMER0_OVERFLOW   (\fBclockCyclesToMicroseconds\fP(64*256))"
+Macros refered from Arduino's implementation\&. 
+.SS "#define MILLIS_INC   (\fBMICROSECONDS_PER_TIMER0_OVERFLOW\fP / 1000)"
+Macros refered from Arduino's implementation\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "template<typename Arg, typename Res> using \fBCallback\fP = void(Arg*, Res*)"
+Function signiture for timer's callback 
+.PP
+\fBSee also\fP
+.RS 4
+\fBTimer\fP\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "unsigned long millis (void )"
+refered from Arduino's implementation 
+.SS "void timerSetup (void )"
+Setup 8-bit timer 0 with appropriate register setting\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

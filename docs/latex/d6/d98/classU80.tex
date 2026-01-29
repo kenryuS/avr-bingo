@@ -1,0 +1,141 @@
+\doxysection{U80 Class Reference}
+\hypertarget{classU80}{}\label{classU80}\index{U80@{U80}}
+
+
+{\ttfamily \+\#include $<$u80.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}} ()=default
+\item 
+constexpr \doxymbox{\hyperlink{classU80_a2f7f50d5b582adf68f75c3553d6ab215}{U80}} (uint16\+\_\+t x\+[5]\+)
+\item 
+\doxymbox{\hyperlink{classU80_acba3582e2d25741f1c176a90eb752a7c}{U80}} (const \doxymbox{\hyperlink{classU80}{U80}} \&x)
+\item 
+\doxymbox{\hyperlink{classU80_a4cadc97b304d75afeca957ee9e857f92}{U80}} (\doxymbox{\hyperlink{classU80}{U80}} \&\&x)
+\item 
+\doxymbox{\hyperlink{classU80_ac7c6bf490b64b8c35ad120f9e0329bcd}{\texorpdfstring{$\sim$}{\string~}\+U80}} ()=default
+\item 
+\doxymbox{\hyperlink{classU80}{U80}} \& \doxymbox{\hyperlink{classU80_a5a854e2adc008a4bef9e0ef9a2056214}{operator=}} (const \doxymbox{\hyperlink{classU80}{U80}} \&other)
+\item 
+\doxymbox{\hyperlink{classU80}{U80}} \& \doxymbox{\hyperlink{classU80_a013ffebb1e6a8de64115b92172a542fe}{operator=}} (\doxymbox{\hyperlink{classU80}{U80}} \&\&other)
+\item 
+constexpr \doxymbox{\hyperlink{classU80}{U80}} \doxymbox{\hyperlink{classU80_a7d19b869be741f569c9908e526a5859e}{operator\texorpdfstring{$\sim$}{\string~}}} ()
+\item 
+bool \doxymbox{\hyperlink{classU80_a8ea3e299f94e0d32d35cef63b2df1fab}{operator\+[$\,$]\+}} (const size\+\_\+t n)
+\item 
+bool \doxymbox{\hyperlink{classU80_a4f0237c4e66a10b93203857a73833db9}{operator==}} (const \doxymbox{\hyperlink{classU80}{U80}} \&rhs)
+\item 
+bool \doxymbox{\hyperlink{classU80_a3215677f2b87adfdc5f9afbbcf441cfb}{operator!=}} (const \doxymbox{\hyperlink{classU80}{U80}} \&rhs)
+\item 
+void \doxymbox{\hyperlink{classU80_a958a1bd9a78fdfa9c27df1420b21d69a}{toggle}} (const size\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+virtual unsigned 80 bit wide integer The 80 bit integer is constructed with 5 16 bit integers. 
+
+\label{doc-constructors}
+\Hypertarget{classU80_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classU80_a17ca6aefebd7654ee0bed8812ebdae12}\index{U80@{U80}!U80@{U80}}
+\index{U80@{U80}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{U80()}{U80()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classU80_a17ca6aefebd7654ee0bed8812ebdae12} 
+U80::\+\+U80 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default Constructor. \Hypertarget{classU80_a2f7f50d5b582adf68f75c3553d6ab215}\index{U80@{U80}!U80@{U80}}
+\index{U80@{U80}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{U80()}{U80()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classU80_a2f7f50d5b582adf68f75c3553d6ab215} 
+U80::\+\+U80 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{\+[5]\+}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Array of 5 uint16\+\_\+t representing the value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classU80_acba3582e2d25741f1c176a90eb752a7c}\index{U80@{U80}!U80@{U80}}
+\index{U80@{U80}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{U80()}{U80()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classU80_acba3582e2d25741f1c176a90eb752a7c} 
+U80::\+\+U80 (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classU80}{U80}} \&}]{x}{}\end{DoxyParamCaption})}
+
+Copy Constructor. \Hypertarget{classU80_a4cadc97b304d75afeca957ee9e857f92}\index{U80@{U80}!U80@{U80}}
+\index{U80@{U80}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{U80()}{U80()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classU80_a4cadc97b304d75afeca957ee9e857f92} 
+U80::\+\+U80 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classU80}{U80}} \&\&}]{x}{}\end{DoxyParamCaption})}
+
+Move Constructor. Same behaviour as copy constructor. \Hypertarget{classU80_ac7c6bf490b64b8c35ad120f9e0329bcd}\index{U80@{U80}!````~U80@{\texorpdfstring{$\sim$}{\string~}U80}}
+\index{````~U80@{\texorpdfstring{$\sim$}{\string~}U80}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}U80()}{\string~U80()}}
+{\footnotesize\ttfamily \label{classU80_ac7c6bf490b64b8c35ad120f9e0329bcd} 
+U80::\+\texorpdfstring{$\sim$}{\string~}\+U80 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor. 
+
+\label{doc-func-members}
+\Hypertarget{classU80_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classU80_a3215677f2b87adfdc5f9afbbcf441cfb}\index{U80@{U80}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{classU80_a3215677f2b87adfdc5f9afbbcf441cfb} 
+bool U80::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classU80}{U80}} \&}]{rhs}{}\end{DoxyParamCaption})}
+
+Inequality operator. \Hypertarget{classU80_a5a854e2adc008a4bef9e0ef9a2056214}\index{U80@{U80}!operator=@{operator=}}
+\index{operator=@{operator=}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classU80_a5a854e2adc008a4bef9e0ef9a2056214} 
+\doxymbox{\hyperlink{classU80}{U80}} \& U80::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classU80}{U80}} \&}]{other}{}\end{DoxyParamCaption})}
+
+Copy Assignment. \Hypertarget{classU80_a013ffebb1e6a8de64115b92172a542fe}\index{U80@{U80}!operator=@{operator=}}
+\index{operator=@{operator=}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classU80_a013ffebb1e6a8de64115b92172a542fe} 
+\doxymbox{\hyperlink{classU80}{U80}} \& U80::\+operator= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classU80}{U80}} \&\&}]{other}{}\end{DoxyParamCaption})}
+
+Move Assignment. Same behaviour as copy assignment. \Hypertarget{classU80_a4f0237c4e66a10b93203857a73833db9}\index{U80@{U80}!operator==@{operator==}}
+\index{operator==@{operator==}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classU80_a4f0237c4e66a10b93203857a73833db9} 
+bool U80::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classU80}{U80}} \&}]{rhs}{}\end{DoxyParamCaption})}
+
+Equality operator. \Hypertarget{classU80_a8ea3e299f94e0d32d35cef63b2df1fab}\index{U80@{U80}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{classU80_a8ea3e299f94e0d32d35cef63b2df1fab} 
+bool U80::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+Bit access operator. 
+\begin{DoxyParams}{Parameters}
+{\em n} & n-\/th bit in a number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bit state represented as boolean. 
+\end{DoxyReturn}
+\Hypertarget{classU80_a7d19b869be741f569c9908e526a5859e}\index{U80@{U80}!operator\texorpdfstring{$\sim$}{\string~}@{operator\texorpdfstring{$\sim$}{\string~}}}
+\index{operator\texorpdfstring{$\sim$}{\string~}@{operator\texorpdfstring{$\sim$}{\string~}}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\sim$}{\string~}()}{operator\string~()}}
+{\footnotesize\ttfamily \label{classU80_a7d19b869be741f569c9908e526a5859e} 
+\doxymbox{\hyperlink{classU80}{U80}} U80::\+operator\texorpdfstring{$\sim$}{\string~} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+Logical not operator. \Hypertarget{classU80_a958a1bd9a78fdfa9c27df1420b21d69a}\index{U80@{U80}!toggle@{toggle}}
+\index{toggle@{toggle}!U80@{U80}}
+\doxysubsubsection{\texorpdfstring{toggle()}{toggle()}}
+{\footnotesize\ttfamily \label{classU80_a958a1bd9a78fdfa9c27df1420b21d69a} 
+void U80::\+toggle (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{n}{}\end{DoxyParamCaption})}
+
+toggle n-\/th bit in a number. 
+\begin{DoxyParams}{Parameters}
+{\em n} & bit to be flipped. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{u80_8hpp}{u80.\+hpp}}\end{DoxyCompactItemize}

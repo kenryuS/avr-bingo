@@ -1,0 +1,49 @@
+\doxysection{ADC.\+hpp}
+\hypertarget{ADC_8hpp_source}{}\label{ADC_8hpp_source}\index{include/ADC.hpp@{include/ADC.hpp}}
+\doxymbox{\hyperlink{ADC_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_ADC\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_ADC\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classADCC_a4d58556bc21651c9597b44812bf848fe}{ADCC}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ae1459875493f0efd4aafb61cf690382e}{channel\_0}},}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a374410974c7f4bfa8e014396909064e2}{channel\_1}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a7495eaf75e1a231d3b6d144e3c262081}{channel\_2}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a71a8bdee8c2c09025eca4633aa31f790}{channel\_3}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a3bb64e59cdf8abfd2ffb1721ac536f7e}{channel\_4}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846a1e2b9a3f83c7d8c91df701f4f0b9837d}{channel\_5}},}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ae17194739198e1c13384db7a210c4d05}{channel\_6}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846ad33756927c90e7c98847ae82c7e9acf2}{channel\_7}}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503da023103189cd17bf6e7d9501f62bda14e}{vref\_vcc}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503da4387551671cae8e8fa5f6882fdc0c238}{vref\_aref}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503daa811726a194d477d84006b7f95daa417}{vref\_11}}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_a4d58556bc21651c9597b44812bf848fe}{ADCC}}(\textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}\ vr);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_aa9d5c83d15c8fb62a242e85db9c73153}{ADCC}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classADCC_a4d58556bc21651c9597b44812bf848fe}{ADCC}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC_a8584138daf4945961c4709adb7c60319}{ADCC}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classADCC_a4d58556bc21651c9597b44812bf848fe}{ADCC}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classADCC_aa40ca437e9fe3441b082d56841d42842}{setVRef}}(\textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}\ vr);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}\ \doxymbox{\hyperlink{classADCC_a305d0d5923e1fb19d749422c798d4057}{getVRef}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classADCC_a34cbbd8578d4f034bec59741d4559993}{setChannel}}(\textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}\ c);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}\ \doxymbox{\hyperlink{classADCC_ad87ddcc6d6f6d301510a7fa1ec9632b4}{getChannel}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ uint16\_t\ \doxymbox{\hyperlink{classADCC_a228cb04e1b9e6880e3d4166372285065}{read}}(\textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}\ c);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{Channel}}\ ch;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_a60738ce403da072d37bb0ad25bac503d}{VRef}}\ vref;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ uint16\_t\ val;}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_ADC\_HPP\_\_}}
+
+\end{DoxyCode}

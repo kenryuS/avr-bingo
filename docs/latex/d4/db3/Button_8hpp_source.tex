@@ -1,0 +1,59 @@
+\doxysection{Button.\+hpp}
+\hypertarget{Button_8hpp_source}{}\label{Button_8hpp_source}\index{include/Button.hpp@{include/Button.hpp}}
+\doxymbox{\hyperlink{Button_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_BUTTON\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_BUTTON\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Pin_8hpp}{Pin.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ADC_8hpp}{ADC.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{VirtualButtonStateChangeInterruptVect}}\ =\ void(\textcolor{keywordtype}{bool},\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{Button_8hpp_aa5046dad6be550e603d80f99379862d3}{EMPTY\_VBSCIV}}(\textcolor{keywordtype}{bool},\ \textcolor{keywordtype}{void}*,\ \textcolor{keywordtype}{void}*)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classButton_ab2dc980d7dabff808d3b8bfb759d4583}{Button}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classButton_ab2dc980d7dabff808d3b8bfb759d4583}{Button}}(\doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{VirtualButtonStateChangeInterruptVect}}\ v,\ \textcolor{keywordtype}{void}*\ arg,\ \textcolor{keywordtype}{void}*\ res);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classButton_a365946b6fbbd62440289e2e34b5fe311}{Button}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classButton_ab2dc980d7dabff808d3b8bfb759d4583}{Button}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{classButton_a38ec77ea728dca2242f6a1f6e93d3e73}{Button}}(\doxymbox{\hyperlink{classButton_ab2dc980d7dabff808d3b8bfb759d4583}{Button}}\&\&\ b)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classButton_abd3fb72b181988ba319d9b7c43c299aa}{setState}}(\textcolor{keywordtype}{bool}\ s);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classButton_a946d9bb84880931ccf3494d84f0ac73a}{getState}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classButton_aab6e05c1fd9da1ee5a91ee7cc70c41a4}{checkAndInterrupt}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ currentState;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ lastState;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{Button_8hpp_adedf46a0e8591afa4194e9c49b2b9610}{VirtualButtonStateChangeInterruptVect}}*\ vect;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ argValPtr;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ retValPtr;}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}{DACButtons}}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}{DACButtons}}(\doxymbox{\hyperlink{classADCC}{ADCC}}*\ adc,\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{ADCC::Channel}}\ ch,\ \textcolor{keywordtype}{size\_t}\ num,\ uint8\_t*\ map,\ uint8\_t\ margin,\ \doxymbox{\hyperlink{classButton}{Button}}*\ btns);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classDACButtons_a7dc7d269b56271101bbc22f88661bbe4}{DACButtons}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}{DACButtons}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classDACButtons_a5cc9c370114bc898898dd5aba7af74e0}{DACButtons}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classDACButtons_aaa94ef8fadaa2d4fac83fb3a8e53cfa2}{DACButtons}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{classDACButtons_a577bba826cf006cad860de202da45a6d}{getButtonNum}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classButton}{Button}}*\ \doxymbox{\hyperlink{classDACButtons_a012b4ae9f8bace6afd6222ca4cbd4c6e}{getButtons}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDACButtons_acf0a55e323df55fea30290f1efab7aaa}{getState}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classADCC}{ADCC}}*\ dac;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{classADCC_ae05e0741eb74226825cae471e58f6846}{ADCC::Channel}}\ channel;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ buttonNum;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ uint8\_t\ dacMargin;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ uint8\_t*\ dacMapping;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classButton}{Button}}*\ buttons;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_BUTTON\_HPP\_\_}}
+
+\end{DoxyCode}

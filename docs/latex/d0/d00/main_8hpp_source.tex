@@ -1,0 +1,72 @@
+\doxysection{main.\+hpp}
+\hypertarget{main_8hpp_source}{}\label{main_8hpp_source}\index{include/main.hpp@{include/main.hpp}}
+\doxymbox{\hyperlink{main_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_MAIN\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_MAIN\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Pin_8hpp}{Pin.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{ShiftReg_8hpp}{ShiftReg.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Button_8hpp}{Button.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{u80_8hpp}{u80.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3}{uint80\_t}}\ =\ \doxymbox{\hyperlink{classU80}{U80}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint8\_t\ NUMS[16]\ =\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ 0b00111111,}
+\DoxyCodeLine{00014\ \ \ \ \ 0b00000110,}
+\DoxyCodeLine{00015\ \ \ \ \ 0b01011011,}
+\DoxyCodeLine{00016\ \ \ \ \ 0b01001111,}
+\DoxyCodeLine{00017\ \ \ \ \ 0b01100110,}
+\DoxyCodeLine{00018\ \ \ \ \ 0b01101101,}
+\DoxyCodeLine{00019\ \ \ \ \ 0b01111101,}
+\DoxyCodeLine{00020\ \ \ \ \ 0b00000111,}
+\DoxyCodeLine{00021\ \ \ \ \ 0b01111111,}
+\DoxyCodeLine{00022\ \ \ \ \ 0b01101111,}
+\DoxyCodeLine{00023\ \ \ \ \ 0b01110111,}
+\DoxyCodeLine{00024\ \ \ \ \ 0b01111100,}
+\DoxyCodeLine{00025\ \ \ \ \ 0b00111001,}
+\DoxyCodeLine{00026\ \ \ \ \ 0b01011110,}
+\DoxyCodeLine{00027\ \ \ \ \ 0b01111001,}
+\DoxyCodeLine{00028\ \ \ \ \ 0b01110001}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{static}\ uint8\_t\ DACBTNMAPPING[4]\ =\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ 6,}
+\DoxyCodeLine{00033\ \ \ \ \ 12}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}},\ }
+\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0a7dfb16f8d3000288c3739c695559bf62}{ALL\_NUMBER\_CALLED}},\ }
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0ab8c975adb3b20d49070a24e7689dff36}{FAILED\_TO\_CALL\_NUMBER}}\ }
+\DoxyCodeLine{00043\ \}\ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0}{BingoMachineError}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{classShiftReg}{ShiftReg}}*\ \doxymbox{\hyperlink{structDispParam_a04eee092b966d42656d36356bdfed511}{sr}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ uint8\_t\ \doxymbox{\hyperlink{structDispParam_a6696a20258ce88b1a4bbb254aeb19e80}{n}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structDispParam_aeff75d69c66b2df71b71fc12c3933aeb}{inHex}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structDispParam_a2909e8ce00117d97b70288ad3b0aaa52}{omitTensZero}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structDispParam_ac19bccbb120afb3d5de403e4650de8fc}{digit}};\ }
+\DoxyCodeLine{00054\ \}\ \doxymbox{\hyperlink{structDispParam}{DispParam}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t*\ \doxymbox{\hyperlink{structCallOutNumberParam_aaa0e750b463d0da2a0660807e6b370a0}{n}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ \doxymbox{\hyperlink{main_8hpp_a24095a6cf3269ed231a8b22a9a2519c0}{BingoMachineError}}\ \doxymbox{\hyperlink{structCallOutNumberParam_a611feab471e35ee2ad55ad6d1731d767}{retCode}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ \doxymbox{\hyperlink{main_8hpp_af3c33feaf26bee13fe3c6536ce7c47e3}{uint80\_t}}\ \doxymbox{\hyperlink{structCallOutNumberParam_ad30ddc49f455e5142c8f1147c2e99f85}{calledNums}};\ }
+\DoxyCodeLine{00063\ \}\ \doxymbox{\hyperlink{structCallOutNumberParam}{CallOutNumberParam}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{main_8hpp_a9ed07fdda2546e129021aa9245a90ba7}{displayT\_CB}}(\doxymbox{\hyperlink{structDispParam}{DispParam}}*\ dp,\ \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{main_8hpp_ae869b80d64eea9fdc8310b45476aa87c}{buttonT\_CB}}(\doxymbox{\hyperlink{classDACButtons}{DACButtons}}*\ d,\ \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{main_8hpp_a92cef3e09194f90e007dd447f2dd339e}{callOutNumber\_VECT}}(\textcolor{keywordtype}{bool}\ s,\ \textcolor{keywordtype}{void}*\ arg,\ \textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{main_8hpp_afd331d2fe607ff1959b7009c122eaf29}{resetBingo\_VECT}}(\textcolor{keywordtype}{bool}\ s,\ \textcolor{keywordtype}{void}*\ arg,\ \textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{main_8hpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{main_8hpp_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_MAIN\_HPP\_\_}}
+
+\end{DoxyCode}

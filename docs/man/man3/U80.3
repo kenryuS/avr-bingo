@@ -1,0 +1,111 @@
+.TH "U80" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+U80
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <u80\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBU80\fP ()=default"
+.br
+.ti -1c
+.RI "constexpr \fBU80\fP (uint16_t x[5])"
+.br
+.ti -1c
+.RI "\fBU80\fP (const \fBU80\fP &x)"
+.br
+.ti -1c
+.RI "\fBU80\fP (\fBU80\fP &&x)"
+.br
+.ti -1c
+.RI "\fB~U80\fP ()=default"
+.br
+.ti -1c
+.RI "\fBU80\fP & \fBoperator=\fP (const \fBU80\fP &other)"
+.br
+.ti -1c
+.RI "\fBU80\fP & \fBoperator=\fP (\fBU80\fP &&other)"
+.br
+.ti -1c
+.RI "constexpr \fBU80\fP \fBoperator~\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator[]\fP (const size_t n)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBU80\fP &rhs)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBU80\fP &rhs)"
+.br
+.ti -1c
+.RI "void \fBtoggle\fP (const size_t n)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+virtual unsigned 80 bit wide integer The 80 bit integer is constructed with 5 16 bit integers\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "U80::U80 ()\fR [default]\fP"
+Default Constructor\&. 
+.SS "U80::U80 (uint16_t x[5])\fR [constexpr]\fP"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP Array of 5 uint16_t representing the value\&. 
+.RE
+.PP
+
+.SS "U80::U80 (const \fBU80\fP & x)"
+Copy Constructor\&. 
+.SS "U80::U80 (\fBU80\fP && x)"
+Move Constructor\&. Same behaviour as copy constructor\&. 
+.SS "U80::~U80 ()\fR [default]\fP"
+Destructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool U80::operator!= (const \fBU80\fP & rhs)"
+Inequality operator\&. 
+.SS "\fBU80\fP & U80::operator= (const \fBU80\fP & other)"
+Copy Assignment\&. 
+.SS "\fBU80\fP & U80::operator= (\fBU80\fP && other)"
+Move Assignment\&. Same behaviour as copy assignment\&. 
+.SS "bool U80::operator== (const \fBU80\fP & rhs)"
+Equality operator\&. 
+.SS "bool U80::operator[] (const size_t n)"
+Bit access operator\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP n-th bit in a number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bit state represented as boolean\&. 
+.RE
+.PP
+
+.SS "\fBU80\fP U80::operator~ ()\fR [constexpr]\fP"
+Logical not operator\&. 
+.SS "void U80::toggle (const size_t n)"
+toggle n-th bit in a number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP bit to be flipped\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

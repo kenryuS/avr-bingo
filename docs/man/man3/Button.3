@@ -1,0 +1,73 @@
+.TH "Button" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Button
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Button\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBButton\fP (\fBVirtualButtonStateChangeInterruptVect\fP v, void *arg, void *res)"
+.br
+.ti -1c
+.RI "\fBButton\fP (const \fBButton\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr \fBButton\fP (\fBButton\fP &&b) noexcept"
+.br
+.ti -1c
+.RI "void \fBsetState\fP (bool s)"
+.br
+.ti -1c
+.RI "bool \fBgetState\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckAndInterrupt\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBButton\fP class\&. This class manages single button state and execution of virtual interrupt or callback\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Button::Button (\fBVirtualButtonStateChangeInterruptVect\fP v, void * arg, void * res)"
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIv\fP virtual interrupt vector or callback to be executed\&. 
+.br
+\fIarg\fP void pointer to interrupt argument(s)\&. 
+.br
+\fIres\fP void pointer to interrupt return(s)\&. 
+.RE
+.PP
+
+.SS "Button::Button (const \fBButton\fP & )\fR [delete]\fP"
+
+.SS "Button::Button (\fBButton\fP && b)\fR [constexpr]\fP, \fR [noexcept]\fP"
+Move constructor\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void Button::checkAndInterrupt ()"
+Check state and execute interrupt\&. The interrupt is only executed when current and previous state missmatches\&. 
+.SS "bool Button::getState ()"
+Gets state of button\&. 
+.SS "void Button::setState (bool s)"
+Sets state of button\&. Usually for counteracting pull up\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP State of button represented in boolean\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.

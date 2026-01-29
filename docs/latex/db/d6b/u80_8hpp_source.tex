@@ -1,0 +1,38 @@
+\doxysection{u80.\+hpp}
+\hypertarget{u80_8hpp_source}{}\label{u80_8hpp_source}\index{include/u80.hpp@{include/u80.hpp}}
+\doxymbox{\hyperlink{u80_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_U80\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_U80\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{classU80_a2f7f50d5b582adf68f75c3553d6ab215}{U80}}(uint16\_t\ x[5]);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_acba3582e2d25741f1c176a90eb752a7c}{U80}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ x);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_a4cadc97b304d75afeca957ee9e857f92}{U80}}(\doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\&\ x);\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_ac7c6bf490b64b8c35ad120f9e0329bcd}{\string~U80}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ \doxymbox{\hyperlink{classU80_a5a854e2adc008a4bef9e0ef9a2056214}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ other);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ \doxymbox{\hyperlink{classU80_a013ffebb1e6a8de64115b92172a542fe}{operator=}}(\doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\&\ other);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\ \doxymbox{\hyperlink{classU80_a7d19b869be741f569c9908e526a5859e}{operator\string~}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classU80_a8ea3e299f94e0d32d35cef63b2df1fab}{operator[]}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ n);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classU80_a4f0237c4e66a10b93203857a73833db9}{operator==}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ rhs);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classU80_a3215677f2b87adfdc5f9afbbcf441cfb}{operator!=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classU80_a17ca6aefebd7654ee0bed8812ebdae12}{U80}}\&\ rhs);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classU80_a958a1bd9a78fdfa9c27df1420b21d69a}{toggle}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ n);\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ uint16\_t\ val[5];\ \textcolor{comment}{//\ 16\ *\ 5\ =\ 80}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ eg.\ "{}AA998877665544332211"{}\_u80\ is\ \{\ 0xAA99,\ 0x8877,\ 0x6655,\ 0x4433,\ 0x2211\ \}}}
+\DoxyCodeLine{00062\ \doxymbox{\hyperlink{classU80}{U80}}\ \textcolor{keyword}{operator}\textcolor{stringliteral}{"{}"{}}\_xU80(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ x,\ \textcolor{keywordtype}{size\_t}\ sz);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_U80\_HPP\_\_}}
+
+\end{DoxyCode}

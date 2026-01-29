@@ -1,0 +1,26 @@
+\doxysection{Timer.\+hpp}
+\hypertarget{Timer_8hpp_source}{}\label{Timer_8hpp_source}\index{include/Timer.hpp@{include/Timer.hpp}}
+\doxymbox{\hyperlink{Timer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_TIMER\_\_HPP\_\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_TIMER\_\_HPP\_\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{defs_8hpp}{defs.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ clockCyclesPerMicrosecond\ (F\_CPU\ /\ 1000000L)}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ clockCyclesToMicroseconds(a)\ ((a)\ /\ clockCyclesPerMicrosecond)}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MICROSECONDS\_PER\_TIMER0\_OVERFLOW\ (clockCyclesToMicroseconds(64*256))}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MILLIS\_INC\ (MICROSECONDS\_PER\_TIMER0\_OVERFLOW\ /\ 1000)}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Arg,\ \textcolor{keyword}{typename}\ Res>}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{Timer_8hpp_a80a271b5629e7f1906289b75fe80c6df}{Callback}}\ =\ void(Arg*,\ Res*);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{Timer_8hpp_a1f7b00cc7b7d74fdeac6743a8ac536d7}{timerSetup}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{Timer_8hpp_a1871228c14c912ca1479cf826ddcb07f}{millis}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{Timer_8tpp}{Timer.tpp}}"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_TIMER\_\_HPP\_\_}}
+
+\end{DoxyCode}

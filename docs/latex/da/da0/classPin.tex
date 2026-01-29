@@ -1,0 +1,191 @@
+\doxysection{Pin Class Reference}
+\hypertarget{classPin}{}\label{classPin}\index{Pin@{Pin}}
+
+
+\doxylink{classPin}{Pin} class.  
+
+
+
+
+{\ttfamily \+\#include $<$Pin.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classPin_af373440e3ac074a5d03905758e2500b5}{Pin}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}pt, uint8\+\_\+t pn)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classPin_a9d694400cf3cc8103ed80aa71c061f0f}{Pin}} (const \doxymbox{\hyperlink{classPin}{Pin}} \&p)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classPin_ac4dd6d664eb08907b368f3e0de8cd6da}{Pin}} (const \doxymbox{\hyperlink{classPin}{Pin}} \&\&p) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classPin_a78c8aa422acbe506be4d366d94dcb7db}{\texorpdfstring{$\sim$}{\string~}\+Pin}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classPin}{Pin}} \& \doxymbox{\hyperlink{classPin_af59220683843df9ce9b0b146419c58af}{operator=}} (const \doxymbox{\hyperlink{classPin}{Pin}} \&p)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPin_a9e1ea2ad46385ea9980de0c421a64587}{set\+Port}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}prt)
+\begin{DoxyCompactList}\small\item\em Sets port address. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classPin_acd2af7bd94758ea28c79b2340b8264f6}{get\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Gets port address. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPin_aad906ab0af1eab43c064acc25a38a960}{set\+Pin}} (uint8\+\_\+t pn)
+\begin{DoxyCompactList}\small\item\em Sets pin index. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{classPin_a9fd0cf1df117ab931db49a8d02b5bf66}{get\+Pin}} ()
+\begin{DoxyCompactList}\small\item\em Gets pin index. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classPin_a1252657abeee46a550d2f8cf82c85b51}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets digital state of a pin. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classPin_ab3b1c6d85728fa38f97a3570ddf7a521}{set\+State}} (bool x)
+\begin{DoxyCompactList}\small\item\em Sets digital state of a pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classPin}{Pin} class. 
+
+This class represents a pin of microcontroler by specifying port and pin. 
+
+\label{doc-constructors}
+\Hypertarget{classPin_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPin_af373440e3ac074a5d03905758e2500b5}\index{Pin@{Pin}!Pin@{Pin}}
+\index{Pin@{Pin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{Pin()}{Pin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classPin_af373440e3ac074a5d03905758e2500b5} 
+Pin::\+\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{pt}{, }\item[{uint8\+\_\+t}]{pn}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & Pointer to port register. \\
+\hline
+{\em pn} & \doxylink{classPin}{Pin} index. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPin_a9d694400cf3cc8103ed80aa71c061f0f}\index{Pin@{Pin}!Pin@{Pin}}
+\index{Pin@{Pin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{Pin()}{Pin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classPin_a9d694400cf3cc8103ed80aa71c061f0f} 
+Pin::\+\+Pin (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classPin}{Pin}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+\Hypertarget{classPin_ac4dd6d664eb08907b368f3e0de8cd6da}\index{Pin@{Pin}!Pin@{Pin}}
+\index{Pin@{Pin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{Pin()}{Pin()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classPin_ac4dd6d664eb08907b368f3e0de8cd6da} 
+Pin::\+\+Pin (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classPin}{Pin}} \&\&}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+Behaves same as copy constructor \begin{DoxySeeAlso}{See also}
+\doxylink{classPin_a9d694400cf3cc8103ed80aa71c061f0f}{Pin(const Pin\& p)}. 
+\end{DoxySeeAlso}
+\Hypertarget{classPin_a78c8aa422acbe506be4d366d94dcb7db}\index{Pin@{Pin}!````~Pin@{\texorpdfstring{$\sim$}{\string~}Pin}}
+\index{````~Pin@{\texorpdfstring{$\sim$}{\string~}Pin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Pin()}{\string~Pin()}}
+{\footnotesize\ttfamily \label{classPin_a78c8aa422acbe506be4d366d94dcb7db} 
+Pin::\+\texorpdfstring{$\sim$}{\string~}\+Pin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classPin_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPin_a9fd0cf1df117ab931db49a8d02b5bf66}\index{Pin@{Pin}!getPin@{getPin}}
+\index{getPin@{getPin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{getPin()}{getPin()}}
+{\footnotesize\ttfamily \label{classPin_a9fd0cf1df117ab931db49a8d02b5bf66} 
+uint8\+\_\+t Pin::\+get\+Pin (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets pin index. 
+
+\Hypertarget{classPin_acd2af7bd94758ea28c79b2340b8264f6}\index{Pin@{Pin}!getPort@{getPort}}
+\index{getPort@{getPort}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{getPort()}{getPort()}}
+{\footnotesize\ttfamily \label{classPin_acd2af7bd94758ea28c79b2340b8264f6} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} Pin::\+get\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets port address. 
+
+\Hypertarget{classPin_a1252657abeee46a550d2f8cf82c85b51}\index{Pin@{Pin}!getState@{getState}}
+\index{getState@{getState}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{classPin_a1252657abeee46a550d2f8cf82c85b51} 
+bool Pin::\+get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets digital state of a pin. 
+
+\Hypertarget{classPin_af59220683843df9ce9b0b146419c58af}\index{Pin@{Pin}!operator=@{operator=}}
+\index{operator=@{operator=}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classPin_af59220683843df9ce9b0b146419c58af} 
+\doxymbox{\hyperlink{classPin}{Pin}} \& Pin::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classPin}{Pin}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Copy assignment. 
+
+\Hypertarget{classPin_aad906ab0af1eab43c064acc25a38a960}\index{Pin@{Pin}!setPin@{setPin}}
+\index{setPin@{setPin}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{setPin()}{setPin()}}
+{\footnotesize\ttfamily \label{classPin_aad906ab0af1eab43c064acc25a38a960} 
+void Pin::\+set\+Pin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pn}{}\end{DoxyParamCaption})}
+
+
+
+Sets pin index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pn} & Index of a pin. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPin_a9e1ea2ad46385ea9980de0c421a64587}\index{Pin@{Pin}!setPort@{setPort}}
+\index{setPort@{setPort}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{setPort()}{setPort()}}
+{\footnotesize\ttfamily \label{classPin_a9e1ea2ad46385ea9980de0c421a64587} 
+void Pin::\+set\+Port (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{prt}{}\end{DoxyParamCaption})}
+
+
+
+Sets port address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prt} & Pointer to port. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classPin_ab3b1c6d85728fa38f97a3570ddf7a521}\index{Pin@{Pin}!setState@{setState}}
+\index{setState@{setState}!Pin@{Pin}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily \label{classPin_ab3b1c6d85728fa38f97a3570ddf7a521} 
+void Pin::\+set\+State (\begin{DoxyParamCaption}\item[{bool}]{x}{}\end{DoxyParamCaption})}
+
+
+
+Sets digital state of a pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Target state of a pin. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{Pin_8hpp}{Pin.\+hpp}}\end{DoxyCompactItemize}

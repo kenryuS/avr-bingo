@@ -1,0 +1,56 @@
+.TH "DispParam" 3 "Thu Jan 29 2026 14:23:22" "AVR Bingo Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DispParam \- Parameters for 7 segments display\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <main\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBShiftReg\fP * \fBsr\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBn\fP"
+.br
+.ti -1c
+.RI "bool \fBinHex\fP"
+.br
+.ti -1c
+.RI "bool \fBomitTensZero\fP"
+.br
+.ti -1c
+.RI "bool \fBdigit\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Parameters for 7 segments display\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "bool DispParam::digit"
+Whether to omit tens zero when displaying single digit number 
+.SS "bool DispParam::inHex"
+Number to be displayed\&. 
+.SS "uint8_t DispParam::n"
+Pointer to shift register object 
+.PP
+\fBSee also\fP
+.RS 4
+\fBShiftReg\fP\&. 
+.RE
+.PP
+
+.SS "bool DispParam::omitTensZero"
+Whether to display number as hexadecimal\&. 
+.SS "\fBShiftReg\fP* DispParam::sr"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AVR Bingo Machine from the source code\&.
