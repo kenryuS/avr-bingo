@@ -62,6 +62,7 @@ void callOutNumber_VECT(bool s, void* arg, void*) {
         param->retCode = ALL_NUMBER_CALLED;
         return;
     }
+
     uint8_t idx = 0;
     uint16_t itr = 0;
     bool isAvailable = false;
@@ -97,7 +98,12 @@ void setup(void) {
     DDRB = 0x01;
     PORTB = 0x00;
     timerSetup();
-    srand(0);
+    ADMUX = 0xA2;
+    ADCSRA |= 0x04;
+    ADCSRA |= (1 << ADEN);
+    ADCSRA |= (1 << ADSC);
+    while (ADCSRA & (1 << ADSC)) {;;}
+    srand(ADC);
 }
 
 int main(void) {
